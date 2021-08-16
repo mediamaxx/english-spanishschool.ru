@@ -157,4 +157,59 @@
 
                 ))
 
+
+                ->add_fields('section_record', 'Форма записи', array(
+
+                    Field::make( 'rich_text', 'form_title', 'Заголовок' )
+                        ->set_default_value('Запишитесь на <span>бесплатное пробное занятие</span> с директором')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'form_subtitle', 'Заголовок' )
+                        ->set_default_value('На занятиях мы познакомимся и покажем как происходят занятия.
+                    Вы узнаете свой уровень языка и получите скидку')
+                        ->set_width(100),
+
+
+                    Field::make('complex', 'form_item', 'Языки (низ)')
+                        ->set_max(3)
+                        ->add_fields(array(
+                            Field::make( 'image', 'form_icon', 'Иконка' )
+                                ->set_width(100),
+
+                            Field::make( 'textarea', 'form_text', 'Текст' )
+                                ->set_default_value('Обучение:
+                Skype или очно')
+                                ->set_width(100),
+
+                        )),
+
+
+
+
+                ))
+
+
+                ->add_fields('section_record_mobile', 'Форма записи (для телефонов))', array(
+
+                    Field::make( 'rich_text', 'form_title_mobile', 'Заголовок' )
+                        ->set_default_value('Пройдите <strong>бесплатный</strong> вводный урок с директором')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'form_subtitle_mobile', 'Заголовок' )
+                        ->set_default_value('Мы готовы ответить на все ваши вопросы по обучению. Мы можем встретиться с вами онлайн или вживую, как вам удобно')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'form_btn_text', 'Текст кнопки' )
+                        ->set_default_value('Записаться')
+                        ->set_width(50),
+
+                    Field::make( 'text', 'form_btn_link', 'Ссылка кнопки' )
+                        ->set_default_value('#modal-record')
+                        ->set_width(50),
+
+
+
+
+                ))
+
         ));

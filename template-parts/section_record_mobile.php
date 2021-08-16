@@ -1,0 +1,20 @@
+<?php
+
+$arResult = [
+    'form_title_mobile' => $args['form_title_mobile'],
+    'form_subtitle_mobile' => $args['form_subtitle_mobile'],
+    'form_btn_text' => $args['form_btn_text'],
+    'form_btn_link' => $args['form_btn_link'],
+];
+
+?>
+
+<div class="record record-mobile">
+    <div class="container">
+        <div class="record__container record-mobile__container">
+            <div class="record-mobile__title"><?= $arResult['form_title_mobile']?></div>
+            <div class="record-mobile__subtitle"><?= $arResult['form_subtitle_mobile']?></div>
+            <a href="<?= $arResult['form_btn_link']?>" class="record-mobile__link btn btn-secondary"><?= $arResult['form_btn_text']?></a>
+        </div>
+    </div>
+</div>
