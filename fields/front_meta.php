@@ -365,4 +365,35 @@
 
                 ))
 
+
+                ->add_fields('section_form', 'Секция с формой', array(
+
+                    Field::make( 'rich_text', 'form_title', 'Заголовок' )
+                        ->set_default_value('Запишитесь на <span>бесплатное</span> <br>пробное занятие с директором')
+                        ->set_width(100),
+
+                    Field::make('complex', 'form_list', 'Список для новичков')
+                        ->add_fields(array(
+                            Field::make( 'text', 'form_list_item', 'Ссылка на информацию' )
+                                ->set_default_value('#')
+                                ->set_width(100),
+                        )),
+
+                    Field::make( 'text', 'form_link', 'Ссылка на форму' )
+                        ->set_default_value('#modal-record')
+                        ->set_width(100),
+
+                    Field::make( 'select', 'form_lang', 'Язык' )
+                        ->set_width(10)
+                        ->set_options( $lang )
+                        ->set_default_value( 'english' ),
+
+                    Field::make( 'image', 'form_lang_image', 'Иконка флага (английский/испанский)' )
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'form_politics', 'Политика (для телефонов)' )
+                        ->set_default_value('Записываясь, вы подтверждаете что ознакомлены с <a href="#">политикой конфиденциальности</a> и согласны на обработку персональных данных')
+                        ->set_width(100),
+                ))
+
         ));
