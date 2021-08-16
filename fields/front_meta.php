@@ -269,4 +269,60 @@
 
                 ))
 
+
+                ->add_fields('section_reviews', 'Секция отзывов', array(
+
+                    Field::make( 'text', 'review_title', 'Заголовок' )
+                        ->set_default_value('Отзывы учеников')
+                        ->set_width(100),
+
+
+                    Field::make('complex', 'reviews', 'Отзывы')
+                        ->add_fields(array(
+                            Field::make( 'image', 'review_image', 'Фото' )
+                                ->set_width(100),
+
+                            Field::make( 'text', 'review_name', 'Фамилия и Имя отзыва' )
+                                ->set_default_value('Екатерина Макарова')
+                                ->set_width(100),
+
+                            Field::make('complex', 'review_item', 'Достижения')
+                                ->add_fields(array(
+                                    Field::make( 'text', 'review_achievement', 'Достижение' )
+                                        ->set_default_value('Окончила курс В1 (испанский язык)')
+                                        ->set_width(100),
+
+                                )),
+
+                            Field::make( 'rich_text', 'review_text', 'Текст отзыва' )
+                                ->set_default_value('Многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть верифициров Таким образом, новая модель организационной деятельности прекрасно подходит для реализации существующих финансовых и административных условий. Каждый из нас понимает очевидную вещь: выбранный нами инновационный путь, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для системы массового участия. И нет сомнений, что явные признаки победы институционализации, инициированные исключительно синтетически')
+                                ->set_width(100),
+
+                        )),
+
+
+
+
+
+
+                    Field::make( 'text', 'review_btn_text', 'Кнопка "Все Отзывы"' )
+                        ->set_default_value('Читать все отзывы')
+                        ->set_width(100),
+
+                    Field::make( 'text', 'review_btn_link', 'Ссылка на все отзывы' )
+                        ->set_default_value('#')
+                        ->set_width(100),
+
+
+                    Field::make( 'text', 'comment_btn_text', 'Кнопка "Оставить отзыв"' )
+                        ->set_default_value('Оставить свой отзыв')
+                        ->set_width(100),
+
+                    Field::make( 'text', 'comment_btn_link', 'Ссылка на комментарий' )
+                        ->set_default_value('#')
+                        ->set_width(100),
+
+
+                ))
+
         ));
