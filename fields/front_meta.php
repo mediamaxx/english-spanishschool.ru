@@ -212,4 +212,61 @@
 
                 ))
 
+
+                ->add_fields('section_lessons', 'Секция Уроки', array(
+
+                    Field::make( 'text', 'lessons_title', 'Заголовок' )
+                        ->set_default_value('Как проходят наши уроки')
+                        ->set_width(100),
+
+                    Field::make( 'image', 'lessons_image', 'Картинка' )
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'lessons_text', 'Текст' )
+                        ->set_default_value('Предварительные выводы неутешительны: высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса соответствующих условий активизации. Как уже неоднократно упомянуто, сделанные на базе интернет-аналитики выводы, вне зависимости от их уровня, должны быть призваны к ответу. Но высокое качество позиционных исследований требует определения и уточнения существующих финансовых и административных условий. С другой стороны, социально-экономическое развитие обеспечивает актуальность кластеризации усилий. Повседневная практика показывает, что реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании ')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'lessons_link_sertificates', 'Ссылка на сертификаты' )
+                        ->set_default_value('#')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'lessons_text_sertificates', 'Ссылка на сертификаты' )
+                        ->set_default_value('Сертификаты')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'lessons_link_about', 'Ссылка на подробности о компании' )
+                        ->set_default_value('#')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'lessons_text_about', 'Ссылка на подробности о компании' )
+                        ->set_default_value('Подробнее о компании')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'lessons_text_socials', 'Подпись для соцсетей' )
+                        ->set_default_value('Подписывайтесь на соцсети: ')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'lessons_inst_link', 'Ссылка Instagram' )
+                        ->set_default_value('#')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'lessons_vk_link', 'Ссылка VK' )
+                        ->set_default_value('#')
+                        ->set_width(100),
+
+
+                    Field::make('complex', 'lessons_gallery', 'Галлерея')
+                        ->add_fields(array(
+                            Field::make( 'image', 'gallery_image', 'Изображение' )
+                                ->set_width(100),
+
+                        )),
+
+                    Field::make( 'rich_text', 'lessons_text_mobile', 'Текст (для телефонов)' )
+                        ->set_default_value('В процессе обучения всегда участвует команда, состоящая из преподавателя и ученика. Именно командный подход приносит наилучшие результаты')
+                        ->set_width(100),
+
+
+                ))
+
         ));
