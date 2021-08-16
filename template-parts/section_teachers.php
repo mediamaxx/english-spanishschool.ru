@@ -1,29 +1,34 @@
 <?php
 
 $arResult = [
-    'title' => $args['title'],
+    'teachers_title' => $args['teachers_title'],
+    'teachers' => $args['teachers'],
 ];
 
 ?>
 
 <section class="teachers">
     <div class="container">
-        <div class="teachers__title section-title">Талантливые преподаватели</div>
+        <div class="teachers__title section-title"><?= $arResult['teachers_title']?></div>
         <div class="teachers__inner">
             <div class="teachers__list list-reset">
 
+                <?php foreach ($arResult['teachers'] as $item):?>
 
-                <div class="teachers__item">
-                    <a href="./img/teach.png"><img src="./img/teach.png" alt="Ткач Дина Игоревна" class="teachers__photo"></a>
-                    <div class="teachers__card">
-                        <div class="teachers__name">Ткач
-                            <span>Дина Игоревна</span>
+                    <div class="teachers__item">
+                        <a href="<?= $item['teach_image']?>"><img src="<?= $item['teach_image']?>" alt="<?= $item['teach_surname']?> <?= $arResult['teach_name']?>" class="teachers__photo"></a>
+                        <div class="teachers__card">
+                            <div class="teachers__name"><?= $item['teach_surname']?>
+                                <span><?= $item['teach_name']?></span>
+                            </div>
+                            <span class="teachers__job"><?= $item['teach_position']?></span>
+                            <span class="teachers__exp">Опыт работы — <?= $item['teach_exp']?></span>
+                            <div class="teachers__description"><span class="highlight">“</span> <?= $item['teach_desc']?> <span class="highlight">“</span></div>
                         </div>
-                        <span class="teachers__job">Директор, преподаватель английского и испанского</span>
-                        <span class="teachers__exp">Опыт работы — 5 лет</span>
-                        <div class="teachers__description"><span class="highlight">“</span>  <span class="highlight">“</span></div>
                     </div>
-                </div>
+
+                <?php endforeach; ?>
+
 
 
             </div>
