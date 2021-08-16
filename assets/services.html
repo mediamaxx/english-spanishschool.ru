@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>New site</title>
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/main.css">
+<!--  <script src="https://api-maps.yandex.ru/2.0-stable/?apikey=API&load=package.standard&lang=ru-RU"></script>-->
+</head>
+<body class="page-template-services">
+<header class="page-header">
+  <div class="container">
+    <div class="page-header__logo" aria-label="Логотип English & Spanish School" style="background-image: url('./img/logo.png');"></div>
+    <div class="page-header__locality">
+      <svg>
+        <use xlink:href="./spritemap.svg#sprite-local"></use>
+      </svg>
+      <span><strong>Калининград</strong>, Советский проспект 81, 2&nbsp;этаж, секция&nbsp;А, помещение &#8470;&nbsp;8, кабинет&nbsp;8</span></div>
+    <div class="page-header__contacts">
+      <a href="tel:+78005679800" class="page-header__phone">
+          <span class="page-header__text">+7 800 567 98 00</span>
+        </a>
+        <a href="tel:+78005679800" class="page-header__phone page-header__phone--sm">
+          <span class="page-header__text">+7 800 567 98 00</span>
+          <svg>
+            <use xlink:href="./spritemap.svg#sprite-phone"></use>
+          </svg>
+        </a>
+      <a href="#modal-record" class="page-header__callback">
+        <span class="page-header__callback--xl">Записаться в школу</span>
+        <span class="page-header__callback--md">Записаться</span>
+      </a>
+    </div>
+    <div class="page-header__burger" aria-label="Меню">
+      <span class="page-header__burger-line"></span>
+    </div>
+  </div>
+  <nav class="page-header__nav">
+    <div class="page-header__overlay">
+    </div>
+    <ul class="page-header__menu">
+      <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Главная</a></li>
+      <li class="page-header__menu-item menu-item menu-item-has-children">
+        <a href="#" class="page-header__link">Английский язык</a>
+        <ul class="sub-menu">
+          <li class="menu-item"><a href="#">Для детей</a></li>
+          <li class="menu-item"><a href="#">Для взрослых</a></li>
+          <li class="menu-item"><a href="#">Английский для туризма</a></li>
+          <li class="menu-item"><a href="#">Корпоративное изучение</a></li>
+          <li class="menu-item"><a href="#">Международные экзамены</a></li>
+          <li class="menu-item"><a href="#">Профессиональные курсы английского языка</a></li>
+          <li class="menu-item"><a href="#">Онлайн уроки</a></li>
+          <li class="menu-item"><a href="#">Летние курсы</a></li>
+          <li class="menu-item"><a href="#">Индивидуальные занятия</a></li>
+        </ul>
+      </li>
+      <li class="page-header__menu-item menu-item">
+        <a href="#" class="page-header__link">Испанский язык</a>
+      </li>
+      <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">О школе</a></li>
+      <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Отзывы</a></li>
+      <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Цены</a></li>
+      <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Блог</a></li>
+      <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Акции</a></li>
+      <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<main class="page-main">
+  <div class="breadcrumbs">
+    <div class="container">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
+        <li class="breadcrumbs__item"><span class="breadcrumbs__text">Испанский язык</span></li>
+      </ul>
+    </div>
+  </div>
+  <section class="hero-services" style="background-image: url(./img/hero-services-bg.png);">
+    <div class="container">
+      <div class="hero-services__content">
+        <div class="hero-services__title">Испанский язык</div>
+        <div class="hero-services__text">Осуществите свою мечту — выучите испанский язык с легкостью</div>
+        <div class="hero-services__price">от 4 500 руб.</div>
+      </div>
+      <div class="hero-services__callback">
+        <div class="hero-services__callback-title">Набираем вечерние группы испанского языка <strong>со скидкой 10%</strong></div>
+        <div class="hero-services__mobile-container">
+          <div class="hero-services__callback-subtitle">Запишитесь на <span class="highlight-xs">бесплатный</span> <span class="hidden-xl">вводный </span> урок:</div>
+<!--          <form class="form form__services-hero">-->
+<!--            <div class="form__field form__field&#45;&#45;services-hero">-->
+<!--              <input type="text" name="phone-cb" class="form__input">-->
+<!--              <span class="form__input-placeholder">Номер телефона <i class="form__input-placeholder&#45;&#45;required">*</i></span>-->
+<!--              <button class="btn btn-primary form__submit form__submit&#45;&#45;services-hero">Записаться</button>-->
+<!--            </div>-->
+<!--            <div class="form__politics form__politics&#45;&#45;services-hero">Записываясь, вы подтверждаете что ознакомлены с <a href="#">политикой конфиденциальности</a> и согласны на обработку персональных данных</div>-->
+<!--          </form>-->
+
+          <div role="form" class="wpcf7" id="wpcf7-f78-o33" lang="ru-RU" dir="ltr">
+            <div class="screen-reader-response"></div>
+            <form action="/#wpcf7-f78-o3" method="post" class="wpcf7-form form form__services-hero" novalidate="novalidate">
+              <div class='input-wrapper input-wrapper--services-hero'>
+                <span class="input-name"> Номер телефона <strong>*</strong></span>
+                <span class="wpcf7-form-control-wrap tel-455">
+                  <input type="tel" name="tel-458" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel input-text" aria-required="true" aria-invalid="false" /></span>
+                <div class="submit-wrapper">
+                  <p>
+                    <input type="submit" value="Записаться" class="wpcf7-form-control wpcf7-submit input-submit input-submit--services-hero request-button btn btn-primary"
+                           id="sale-submit3" />
+                  </p>
+                </div>
+              </div>
+              <div class="check-wrapper check-wrapper--services-hero">
+                <span class="wpcf7-form-control-wrap acceptance-728">
+                    <span class="wpcf7-form-control wpcf7-acceptance">
+                        <span class="wpcf7-list-item">
+                            <label>
+      <!--                        <input type="checkbox" name="acceptance-728" value="1" aria-invalid="false" class="input-check" />-->
+                              <span class="wpcf7-list-item-label">
+                                    <span class="input-check__text">Записываясь, вы подтверждаете что ознакомлены с <a href="">политикой конфиденциальности</a> и согласны на обработку персональных данных</span>
+                              </span>
+                            </label>
+                        </span>
+                    </span>
+                </span>
+              </div>
+              <div class="hidden-wrapper">
+                <span class="wpcf7-form-control-wrap url-47"><input type="url" name="url-47" value="" class="wpcf7-form-control wpcf7-text wpcf7-url wpcf7-validates-as-url input-hidden__url" id="input-hidden__url" aria-invalid="false" /></span>
+              </div>
+              <div class="wpcf7-response-output wpcf7-display-none"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-services__front-image">
+      <img class="hero-services__front-image--md" src="./img/services-hero.png" alt="Языковая школа в Калининграде">
+      <img class="hero-services__front-image--xs" src="./img/services-hero-mobile.png" alt="Языковая школа в Калининграде">
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <div class="services__title section-title">Мы предлагаем обучение у нас</div>
+      <div class="grid grid--services">
+        <div class="grid__item">
+          <a href="#" class="grid__cover grid__cover--services">
+            <img src="./img/hero-bg.png" alt="Для детей">
+          </a>
+          <a href="#" class="grid__title grid__title--services">Для детей</a>
+        </div>
+        <div class="grid__item">
+          <a href="#" class="grid__cover grid__cover--services">
+            <img src="./img/services2.png" alt="Для взрослых">
+          </a>
+          <a href="#" class="grid__title grid__title--services">Для взрослых</a>
+        </div>
+        <div class="grid__item">
+          <a href="#" class="grid__cover grid__cover--services">
+            <img src="./img/services3.png" alt="Уроки испанского по Skype">
+          </a>
+          <a href="#" class="grid__title grid__title--services">Уроки испанского по Skype</a>
+        </div>
+        <div class="grid__item">
+          <a href="#" class="grid__cover grid__cover--services">
+            <img src="./img/services4.png" alt="Испанский для туризма">
+          </a>
+          <a href="#" class="grid__title grid__title--services">Испанский для туризма</a>
+        </div>
+        <div class="grid__item">
+          <a href="#" class="grid__cover grid__cover--services">
+            <img src="./img/services5.png" alt="Интенсивные курсы испанского">
+          </a>
+          <a href="#" class="grid__title grid__title--services">Интенсивные курсы испанского</a>
+        </div>
+        <div class="grid__item">
+          <a href="#" class="grid__cover grid__cover--services">
+            <img src="./img/services6.png" alt="Подготовка к поступлению в ВУЗы Испании">
+          </a>
+          <a href="#" class="grid__title grid__title--services">Подготовка к поступлению<br> в ВУЗы Испании</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="promo">
+    <div class="container">
+      <div class="promo__title section-title">Испанский в нашей школе — это</div>
+      <div class="promo__wrap">
+        <div class="promo__content">
+          <div class="promo__cover">
+            <img src="./img/promo.png" alt="" class="promo__img alignright">
+          </div>
+          <div class="promo__subtitle">Принимая во внимание показатели успешности, высокое качество позиционных исследований обеспечивает актуальность дальнейших направлений развития!</div>
+          <div class="promo__text">
+            <p>Многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть верифициров Таким образом, новая модель организационной деятельности прекрасно подходит для реализации существующих финансовых и административных условий.
+
+              Каждый из нас понимает очевидную вещь: выбранный нами инновационный путь, а также свежий взгляд на привычные вещ. Таким образом, новая модель организационной деятельности прекрасно </p>
+            <ul class="promo__list list-reset">
+              <li class="promo__item">
+                <span class="icon" style="background-image: url(./img/ico1.png);"></span>Улыбки и счатье<span></span>
+              </li>
+              <li class="promo__item">
+                <span class="icon" style="background-image: url(./img/ico2.png);"></span>
+                <span>Развитие</span>
+              </li>
+              <li class="promo__item">
+                <span class="icon" style="background-image: url(./img/ico3.png);"></span>
+                <span>Радость и веселье</span>
+              </li>
+              <li class="promo__item">
+                <span class="icon" style="background-image: url(./img/ico4.png);"></span>
+                <span>Интерес</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="price">
+    <div class="container">
+      <div class="price__title section-title">Стоимость обучения</div>
+      <div class="price__subtitle">Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции обеспечивает актуальность приоритизации разума над эмоциями. Банальные, но неопровержимые выводы, а также активно развивающиеся страны третьего мира, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут представлены в исключительно положительном свете. С другой стороны, начало повседневной работы по формированию позиции способствует повышению качества направлений прогрессивного развития.</div>
+      <div class="price__grid">
+        <div class="price__item">
+          <div class="price__subject">бесплатный урок</div>
+          <div class="price__desc">
+            <span class="price__time">
+              <svg>
+                  <use xlink:href="./spritemap.svg#sprite-clock"></use>
+              </svg>
+              <span class="price__time-value">40 минут</span>
+            </span>
+            <span class="price__lessons">
+              <svg>
+                  <use xlink:href="./spritemap.svg#sprite-clndr"></use>
+              </svg>
+              <span class="price__lessons-value">1 занятие в месяц</span>
+            </span>
+          </div>
+          <div class="price__value">БЕСПЛАТНО</div>
+          <button class="btn btn-primary price__btn">Записаться</button>
+        </div>
+        <div class="price__item">
+          <div class="price__subject">груповые занятия</div>
+          <div class="price__desc">
+            <span class="price__time">
+              <svg>
+                  <use xlink:href="./spritemap.svg#sprite-clock"></use>
+              </svg>
+              <span class="price__time-value">90 минут</span>
+            </span>
+            <span class="price__lessons">
+              <svg>
+                  <use xlink:href="./spritemap.svg#sprite-clndr"></use>
+              </svg>
+              <span class="price__lessons-value">8 занятий в месяц</span>
+            </span>
+          </div>
+          <div class="price__value">4 500 <span class="price__currency">руб./мес</span></div>
+          <button class="btn btn-primary price__btn">Записаться</button>
+        </div>
+        <div class="price__item">
+          <div class="price__subject">Занятия в паре</div>
+          <div class="price__desc">
+            <span class="price__time">
+              <svg>
+                  <use xlink:href="./spritemap.svg#sprite-clock"></use>
+              </svg>
+              <span class="price__time-value">40 минут</span>
+            </span>
+            <span class="price__lessons">
+              <svg>
+                  <use xlink:href="./spritemap.svg#sprite-clndr"></use>
+              </svg>
+              <span class="price__lessons-value">1 занятие в месяц</span>
+            </span>
+          </div>
+          <div class="price__value">8 500 <span class="price__currency">руб./мес</span></div>
+          <button class="btn btn-primary price__btn">Записаться</button>
+        </div>
+        <div class="price__item">
+          <div class="price__subject">индивидуальные занятия</div>
+          <div class="price__desc">
+            <span class="price__time">
+              <svg>
+                  <use xlink:href="./spritemap.svg#sprite-clock"></use>
+              </svg>
+              <span class="price__time-value">90 минут</span>
+            </span>
+            <span class="price__lessons">
+              <svg>
+                  <use xlink:href="./spritemap.svg#sprite-clndr"></use>
+              </svg>
+              <span class="price__lessons-value">8 занятий в месяц</span>
+            </span>
+          </div>
+          <div class="price__value">12 500 <span class="price__currency">руб./мес</span></div>
+          <button class="btn btn-primary price__btn">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="progress">
+    <div class="container">
+      <div class="progress__title section-title">Ваш прогресс после курса</div>
+      <div class="progress__subtitle">Многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть верифициров</div>
+      <ul class="progress__container list-reset">
+        <li class="progress__item">
+          <span class="icon" style="background-image: url(./img/prg1.png);"></span>
+          <span>Увеличите словарный запас не менее, чем на 4000 слов</span>
+        </li>
+        <li class="progress__item">
+          <span class="icon" style="background-image: url(./img/prg2.png);"></span>
+          <span>Сможете узнать маршрут у гражданина другой страны</span>
+        </li>
+        <li class="progress__item">
+          <span class="icon" style="background-image: url(./img/prg3.png);"></span>
+          <span>Сможете смотреть сериалы и фильмы на иностранном языке</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="record record--services">
+    <div class="container">
+      <div class="record__container record__container--services">
+        <div class="record__cell record__cell--left">
+          <div class="record__title record__title--services section-title">Запишитесь на <span class="highlight">бесплатное пробное занятие</span> с директором</div>
+          <div class="record__subtitle record__subtitle--services">На занятиях мы познакомимся и покажем как происходят занятия.<br>
+            Вы узнаете свой уровень языка и получите скидку</div>
+          <ul class="record__descr list-reset">
+            <li class="record__descr-item">
+              <span class="icon" style="background-image: url(./img/record-icon1.png);"></span>
+              <span>Обучение:
+                Skype или очно</span>
+            </li>
+            <li class="record__descr-item">
+              <span class="icon" style="background-image: url(./img/record-icon2.png);"></span>
+              <span>40 минут —
+                время урока</span>
+            </li>
+          </ul>
+        </div>
+        <div class="record__cell record__cell--right">
+          <div class="record__cell record__cell--right">
+            <div role="form" class="wpcf7" id="wpcf7-f78-o34" lang="ru-RU" dir="ltr">
+              <div class="screen-reader-response"></div>
+              <form action="/#wpcf7-f78-o3" method="post" class="wpcf7-form form form__services" novalidate="novalidate">
+                <div class="form__title form__title--services">Ваши данные</div>
+                <div class="input-wrapper input-wrapper--services">
+                  <span class="input-name">Имя <strong>*</strong></span>
+                  <span class="wpcf7-form-control-wrap text-291">
+                    <input type="text" name="text-293" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input-text"
+                           aria-required="true" aria-invalid="false" />
+                  </span>
+                </div>
+                <div class='input-wrapper input-wrapper--services'>
+                  <span class="input-name"> Номер телефона <strong>*</strong></span>
+                  <span class="wpcf7-form-control-wrap tel-455">
+                    <input type="tel" name="tel-457" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel input-text" aria-required="true" aria-invalid="false" /></span>
+                </div>
+                <div class="hidden-wrapper">
+                  <span class="wpcf7-form-control-wrap url-47"><input type="url" name="url-48" value="" class="wpcf7-form-control wpcf7-text wpcf7-url wpcf7-validates-as-url input-hidden__url" id="input-hidden__url" aria-invalid="false" /></span>
+                </div>
+                <div class="submit-wrapper">
+                  <p>
+                    <input type="submit" value="Записаться" class="wpcf7-form-control wpcf7-submit input-submit request-button input-submit--services btn btn-secondary"
+                           id="sale-submit4" />
+                  </p>
+                  <div class="check-wrapper check-wrapper--services">
+                  <span class="wpcf7-form-control-wrap acceptance-728">
+                      <span class="wpcf7-form-control wpcf7-acceptance">
+                          <span class="wpcf7-list-item">
+                              <label>
+        <!--                        <input type="checkbox" name="acceptance-728" value="1" aria-invalid="false" class="input-check" />-->
+                                <span class="wpcf7-list-item-label">
+                                      <span class="input-check__text">Записываясь, вы подтверждаете что ознакомлены с <a href="#">политикой конфиденциальности</a> и согласны на обработку персональных данных</span>
+                                </span>
+                              </label>
+                          </span>
+                      </span>
+                  </span>
+                  </div>
+                </div>
+                <div class="wpcf7-response-output wpcf7-display-none"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="teachers">
+    <div class="container">
+      <div class="teachers__title section-title">Талантливые преподаватели</div>
+      <div class="teachers__inner">
+        <div class="teachers__list list-reset">
+          <div class="teachers__item">
+            <a href="./img/teach.png"><img src="./img/teach.png" alt="Ткач Дина Игоревна" class="teachers__photo"></a>
+            <div class="teachers__card">
+              <div class="teachers__name">Ткач
+                <span>Дина Игоревна</span>
+              </div>
+              <span class="teachers__job">Директор, преподаватель английского и испанского</span>
+              <span class="teachers__exp">Опыт работы — 5 лет</span>
+              <div class="teachers__description"><span class="highlight">“</span> Разнообразный и богатый опыт говорит нам, что современная методология разработки позволяет выполнить важные задания по разработке первоочередных требований. Идейные соображения высшего порядка, а также сложившаяся структура организации создаёт предпосылки для первоочередных требований. Внезапно, действия представителей оппозиции лишь добавляют фракционных разногласий и ассоциативно распределены по отраслям. <span class="highlight">“</span></div>
+            </div>
+          </div>
+          <div class="teachers__item">
+            <!--              <a href="./img/teach.png"><img src="./img/teach.png" alt="Ткач Дина Игоревна" class="teachers__photo"></a>-->
+            <div class="teachers__card">
+              <div class="teachers__name">Ткач
+                <span>Дина Игоревна</span></div>
+              <span class="teachers__job">Директор, преподаватель английского и испанского</span>
+              <span class="teachers__exp">Опыт работы — 5 лет</span>
+              <div class="teachers__description"><span class="highlight">“</span> Разнообразный и богатый опыт говорит нам, что современная методология разработки позволяет выполнить важные задания по разработке первоочередных требований. Идейные соображения высшего порядка, а также сложившаяся структура организации создаёт предпосылки для первоочередных требований. Внезапно, действия представителей оппозиции лишь добавляют фракционных разногласий и ассоциативно распределены по отраслям. <span class="highlight">“</span></div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="teachers__link">Посмотреть всех преподавателей</a>
+        <div class="teachers__arrows carousel-arrows__container">
+          <div class="teachers__arrows--prev carousel-arrows__item carousel-arrows__item--prev" aria-label="Предыдущий слайд">
+            <svg>
+              <use xlink:href="./spritemap.svg#sprite-ar-prev"></use>
+            </svg>
+          </div>
+          <div class="teachers__arrows--next carousel-arrows__item carousel-arrows__item--next" aria-label="Следующий слайд">
+            <svg>
+              <use xlink:href="./spritemap.svg#sprite-ar-next"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lessons">
+    <div class="container">
+      <div class="lessons__title section-title">Как проходят наши уроки</div>
+    </div>
+    <div class="gallery">
+      <div class="gallery__inner">
+        <div class="container container--services">
+          <div class="gallery__subtitle gallery__subtitle--services">А ещё акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть ограничены исключительно образом мышления.
+            Задача организации, в особенности же начало повседневной работы по формированию позиции предполагает независимые способы реализации направлений прогрессивного развития.</div>
+          <div class="gallery__arrows gallery__arrows--services carousel-arrows__container">
+            <div class="gallery__arrows--prev carousel-arrows__item carousel-arrows__item--prev" aria-label="Предыдущий слайд">
+              <svg>
+                <use xlink:href="./spritemap.svg#sprite-ar-prev"></use>
+              </svg>
+            </div>
+            <div class="gallery__arrows--next carousel-arrows__item carousel-arrows__item--next" aria-label="Следующий слайд">
+              <svg>
+                <use xlink:href="./spritemap.svg#sprite-ar-next"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="gallery__list list-reset">
+          <a href="./img/gallery1.png" class="gallery__item"><img src="./img/gallery1.png" alt="" class="gallery__img"></a>
+          <a href="./img/gallery2.png" class="gallery__item"><img src="./img/gallery2.png" alt="" class="gallery__img"></a>
+          <a href="./img/gallery3.png" class="gallery__item"><img src="./img/gallery3.png" alt="" class="gallery__img"></a>
+          <a href="./img/gallery4.png" class="gallery__item"><img src="./img/gallery4.png" alt="" class="gallery__img"></a>
+          <a href="./img/gallery5.png" class="gallery__item"><img src="./img/gallery5.png" alt="" class="gallery__img"></a>
+          <a href="./img/gallery6.png" class="gallery__item"><img src="./img/gallery6.png" alt="" class="gallery__img"></a>
+        </div>
+        <div class="gallery__description visible-xs">
+          <div class="container">
+            <p>В процессе обучения всегда участвует команда, состоящая из преподавателя и ученика. Именно командный подход приносит наилучшие результаты</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="record-bottom record-bottom--services">
+    <div class="container">
+      <div class="record-bottom__inner">
+        <div class="record-bottom__content record-bottom__content--services">
+          <div class="record-bottom__title">У Вас есть <span class="highlight">вопросы</span> по обучению ?</div>
+          <div class="record-bottom__subtitle record-bottom__subtitle--xl">Оставьте заявку и мы перезвоним Вам в блищайшее время!
+            Или оставте свой вопрос, нажав на кнопку “Оставить вопрос” и мы ответим в течение 12 часов. </div>
+          <div class="record-bottom__subtitle record-bottom__subtitle--xs">Оставьте заявку на <strong>бесплатный пробный урок</strong> английского языка
+            Мы видим все заявки и обязательно с вами свяжемся</div>
+          <div class="record-bottom__socials">Вы можете также написать нам в чатменеджерах:
+            <a href="#" class="record-bottom__social" aria-label="Напишите нам WhatsApp">
+              <svg>
+                <use xlink:href="./spritemap.svg#sprite-wapp"></use>
+              </svg>
+            </a>
+            <a href="#" class="record-bottom__social" aria-label="Напишите нам Telegram">
+              <svg>
+                <use xlink:href="./spritemap.svg#sprite-tg"></use>
+              </svg>
+            </a>
+            <a href="#" class="record-bottom__social" aria-label="Напишите нам Viber">
+              <svg>
+                <use xlink:href="./spritemap.svg#sprite-viber"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="record-bottom__cb-inner">
+          <a href="#modal-record" class="record__cb btn btn-secondary">Заказать звонок</a>
+          <a href="#modal-question" class="record__cb btn btn-secondary">Задать вопросы</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="reviews">
+    <div class="container">
+      <div class="reviews__title section-title">Отзывы учеников</div>
+      <div class="reviews__container">
+        <div class="reviews__list list-reset">
+          <div class="reviews__item">
+            <div class="reviews__img">
+              <img src="./img/review1.png" alt="">
+            </div>
+            <div class="reviews__content">
+              <div class="reviews__name">Екатерина Макарова</div>
+              <ul class="reviews__features">
+                <li class="reviews__features-item">Окончила курс В1 (испанский язык)</li>
+                <li class="reviews__features-item">Поступила в Univercitad de Valencia</li>
+              </ul>
+              <div class="reviews__body">
+                <p>Многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть верифициров Таким образом, новая модель организационной деятельности прекрасно подходит для реализации существующих финансовых и административных условий. Каждый из нас понимает очевидную вещь: выбранный нами инновационный путь, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для системы массового участия. И нет сомнений, что явные признаки победы институционализации, инициированные исключительно синтетически</p>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__item">
+            <div class="reviews__img">
+              <img src="./img/review1.png" alt="">
+            </div>
+            <div class="reviews__content">
+              <div class="reviews__name">Екатерина Макарова</div>
+              <ul class="reviews__features">
+                <li class="reviews__features-item">Окончила курс В1 (испанский язык)</li>
+                <li class="reviews__features-item">Поступила в Univercitad de Valencia</li>
+              </ul>
+              <div class="reviews__body">
+                <p>Многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть верифициров Таким образом, новая модель организационной деятельности прекрасно подходит для реализации существующих финансовых и административных условий. Каждый из нас понимает очевидную вещь: выбранный нами инновационный путь, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для системы массового участия. И нет сомнений, что явные признаки победы институционализации, инициированные исключительно синтетически</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__arrows carousel-arrows__container">
+          <div class="reviews__arrows--prev carousel-arrows__item carousel-arrows__item--prev" aria-label="Предыдущий слайд">
+            <svg>
+              <use xlink:href="./spritemap.svg#sprite-ar-prev"></use>
+            </svg>
+          </div>
+          <div class="reviews__arrows--next carousel-arrows__item carousel-arrows__item--next" aria-label="Следующий слайд">
+            <svg>
+              <use xlink:href="./spritemap.svg#sprite-ar-next"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews__link-wrapper">
+        <a href="#" class="btn btn-primary btn-reset reviews__btn">Читать все отзывы</a>
+        <a href="#" class="btn btn-secondary btn-reset reviews__btn">Оставить свой отзыв</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="seo">
+    <div class="container">
+      <div class="seo__title section-title">СЕО БЛОК</div>
+      <div class="seo__content">
+        <p>Многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть верифициров Таким образом, новая модель организационной деятельности прекрасно подходит для реализации существующих финансовых и административных условий. Каждый из нас понимает очевидную вещь: выбранный нами инновационный путь, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для системы массового участия. И нет сомнений, что явные признаки победы институционализации, инициированные исключительно синтетически.
+          <br>
+          <br>
+          Таким образом, новая модель организационной деятельности прекрасно подходит для реализации существующих финансовых и административных условий. Каждый из нас понимает очевидную вещь: выбранный нами инновационный путь</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="page-footer">
+  <div class="container">
+    <div class="page-footer__top">
+      <div class="page-footer__logo logo" aria-label="Логотип English & Spanish School" style="background-image: url('./img/logo.png');"></div>
+      <ul class="page-footer__nav menu list-reset">
+        <li class="page-footer__nav-item menu-item"><a href="#">Главная</a></li>
+        <li class="page-footer__nav-item menu-item"><a href="#">О школе</a></li>
+        <li class="page-footer__nav-item menu-item"><a href="#">Отзывы</a></li>
+        <li class="page-footer__nav-item menu-item"><a href="#">Цены</a></li>
+        <li class="page-footer__nav-item menu-item"><a href="#">Блог</a></li>
+        <li class="page-footer__nav-item menu-item"><a href="#">Акции</a></li>
+        <li class="page-footer__nav-item menu-item"><a href="#">Контакты</a></li>
+      </ul>
+      <a href="tel:+78005679800" class="page-footer__phone phone">+7 800 567 98 00</a>
+    </div>
+    <div class="page-footer__middle">
+      <div class="page-footer__middle-left">
+        <div class="page-footer__socials-title">Языковая школа в Калининграде</div>
+        <div class="page-footer__socials list-reset">
+          <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Instagram">
+            <svg>
+              <use xlink:href="./spritemap.svg#sprite-inst"></use>
+            </svg>
+          </a>
+          <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Вконтакте">
+            <svg>
+              <use xlink:href="./spritemap.svg#sprite-vk"></use>
+            </svg>
+          </a>
+          <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в WhatsApp">
+            <svg>
+              <use xlink:href="./spritemap.svg#sprite-wapp"></use>
+            </svg>
+          </a>
+          <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Telegram">
+            <svg>
+              <use xlink:href="./spritemap.svg#sprite-tg"></use>
+            </svg>
+          </a>
+          <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Viber">
+            <svg>
+              <use xlink:href="./spritemap.svg#sprite-viber"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="page-footer__middle-center">
+        <div class="page-footer__menu-wrapper footer-menu__left">
+          <a href="#"><span class="page-footer__menu-title">Английский язык</span></a>
+          <ul class="page-footer__menu--left list-reset">
+            <li class="page-footer__menu menu-item"><a href="#">Для детей</a></li>
+            <li class="page-footer__menu menu-item"><a href="#">Английский для туризма</a></li>
+            <li class="page-footer__menu menu-item"><a href="#">Корпоративное обучение</a></li>
+            <li class="page-footer__menu menu-item"><a href="#">Международные экзамены</a></li>
+            <li class="page-footer__menu menu-item"><a href="#">Для взрослых</a></li>
+            <li class="page-footer__menu menu-item"><a href="#">Профессиональные курсы английского языка</a></li>
+            <li class="page-footer__menu menu-item"><a href="#">Онлайн уроки</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__menu-wrapper footer-menu__right">
+          <a href=""><span class="page-footer__menu-title">Испанский язык</span></a>
+          <ul class="page-footer__menu--right list-reset">
+            <li class="page-footer__menu menu-item"><a href="#">Для детей</a></li>
+            <li class="page-footer__menu menu-item"><a href="#">Для взрослых</a></li>
+            <li class="page-footer__menu menu-item"><a href="#">Испанский для туризма</a></li>
+            <li class="page-footer__menu menu-item"><a href="#">Индивидуальные курсы испанского языка</a></li>
+            <li class="page-footer__menu menu-item"><a href="#">Уроки испанского по Skype</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-footer__middle-right vcard">
+        <div class="fn org hidden visually-hidden">English & Spanish School</div>
+        <a href="mailto:dinatkatch@mail.ru" class="page-footer__email email">dinatkatch@mail.ru</a>
+        <div class="page-footer__adr adr">
+          <div class="page-footer__adr-title">Адрес:</div>
+          <address><span class="locality">Калининград</span>, <span class="street-address">Советский проспeкт</span>, <span class="extended-address">д.45, корпус 5</span></address>
+          <div class="page-footer__adr-title">Режимы работы:</div>
+          <div class="worktime">вт-сб 10:00-19:00
+            вс-пн выходные</div>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer__bottom">
+      <div class="page-footer__copyright">
+        <div class="page-footer__copy-date"><?=date('Y');?>  English Spanish School</div>
+        <div class="page-footer__copy-text">Все материалы данного сайта являются объектами авторского права (в том числе дизайн). Запрещается копирование, распространение <br>
+          (в том числе путем копирования на другие сайты и ресурсы в Интернете) или любое иное использование информации и объектов без предварительного согласия правообладателя</div>
+      </div>
+      <a href="http://mtsite.ru" class="page-footer__powered dev-link" rel=”norollow”>
+        <span class="dev-link__text">Сделано в веб-студии "Мультисайт" Разработка и продвижение сайтов</span>
+        <span class="dev-link__img">
+            <img src="./img/mtsite.png" alt="Сделано в веб-студии Мультисайт">
+          </span>
+      </a>
+    </div>
+  </div>
+</footer>
+<div class="hide" id="toTop">
+  <svg>
+    <use xlink:href="./spritemap.svg#sprite-top"></use>
+  </svg>
+</div>
+
+<div class="modal" id="modal-record">
+  <div class="modal__container">
+    <div class="modal__title">Оставьте заявку</div>
+    <div class="modal__subtitle">И&nbsp;наш менеджер свяжется с&nbsp;Вами для уточнения информации</div>
+    <div role="form" class="wpcf7" id="wpcf7-f78-o3" lang="ru-RU" dir="ltr">
+      <div class="screen-reader-response"></div>
+      <form action="/#wpcf7-f78-o3" method="post" class="wpcf7-form form" novalidate="novalidate">
+        <div class="input-wrapper">
+          <span class="input-name">Имя <strong>*</strong></span>
+          <span class="wpcf7-form-control-wrap text-291">
+                <input type="text" name="text-291" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input-text"
+                       aria-required="true" aria-invalid="false" />
+            </span>
+        </div>
+        <div class='input-wrapper'>
+          <span class="input-name"> Номер телефона <strong>*</strong></span>
+          <span class="wpcf7-form-control-wrap tel-455">
+            <input type="tel" name="tel-455" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel input-text" aria-required="true" aria-invalid="false" /></span>
+        </div>
+        <div class="check-wrapper">
+          <span class="wpcf7-form-control-wrap acceptance-728">
+              <span class="wpcf7-form-control wpcf7-acceptance">
+                  <span class="wpcf7-list-item">
+                      <label>
+<!--                        <input type="checkbox" name="acceptance-728" value="1" aria-invalid="false" class="input-check" />-->
+                        <span class="wpcf7-list-item-label">
+                              <span class="input-check__text">Записываясь, вы подтверждаете что ознакомлены с политикой конфиденциальности и согласны на обработку персональных данных</span>
+                        </span>
+                      </label>
+                  </span>
+              </span>
+          </span>
+        </div>
+        <div class="hidden-wrapper">
+            <span class="wpcf7-form-control-wrap url-47"><input type="url" name="url-47" value="" class="wpcf7-form-control wpcf7-text wpcf7-url wpcf7-validates-as-url input-hidden__url" id="input-hidden__url" aria-invalid="false" /></span>
+        </div>
+        <div class="submit-wrapper">
+          <p>
+            <input type="submit" value="Оставить заявку" class="wpcf7-form-control wpcf7-submit input-submit request-button btn btn-primary"
+                   id="sale-submit" />
+          </p>
+        </div>
+        <div class="wpcf7-response-output wpcf7-display-none"></div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<div class="modal" id="modal-question">
+  <div class="modal__container">
+    <div class="modal__title">Оставьте свой вопрос</div>
+    <div class="modal__subtitle">И&nbsp;наш менеджер свяжется с&nbsp;Вами для уточнения информации</div>
+    <div role="form" class="wpcf7" id="wpcf7-f78-o31" lang="ru-RU" dir="ltr">
+      <div class="screen-reader-response"></div>
+      <form action="/#wpcf7-f78-o3" method="post" class="wpcf7-form form" novalidate="novalidate">
+        <div class="input-wrapper">
+          <span class="input-name">Имя <strong>*</strong></span>
+          <span class="wpcf7-form-control-wrap text-291">
+                <input type="text" name="text-292" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input-text"
+                       aria-required="true" aria-invalid="false" />
+            </span>
+        </div>
+        <div class='input-wrapper'>
+          <span class="input-name"> Номер телефона <strong>*</strong></span>
+          <span class="wpcf7-form-control-wrap tel-455">
+            <input type="tel" name="tel-456" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel input-text" aria-required="true" aria-invalid="false" /></span>
+        </div>
+        <div class='input-wrapper'>
+          <span class="input-name input-name--textarea"> Вопрос <strong>*</strong></span>
+          <span class="wpcf7-form-control-wrap tel-455">
+            <textarea name="message-323" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required input-textarea" aria-required="true" aria-invalid="false"></textarea></span>
+        </div>
+        <div class="check-wrapper">
+          <span class="wpcf7-form-control-wrap acceptance-728">
+              <span class="wpcf7-form-control wpcf7-acceptance">
+                  <span class="wpcf7-list-item">
+                      <label>
+<!--                        <input type="checkbox" name="acceptance-728" value="1" aria-invalid="false" class="input-check" />-->
+                        <span class="wpcf7-list-item-label">
+                              <span class="input-check__text">Записываясь, вы подтверждаете что ознакомлены с <a href="">политикой конфиденциальности</a> и согласны на обработку персональных данных</span>
+                        </span>
+                      </label>
+                  </span>
+              </span>
+          </span>
+        </div>
+        <div class="hidden-wrapper">
+          <span class="wpcf7-form-control-wrap url-47"><input type="url" name="url-47" value="" class="wpcf7-form-control wpcf7-text wpcf7-url wpcf7-validates-as-url input-hidden__url" id="input-hidden__url" aria-invalid="false" /></span>
+        </div>
+        <div class="submit-wrapper">
+          <p>
+            <input type="submit" value="Оставить заявку" class="wpcf7-form-control wpcf7-submit input-submit request-button btn btn-primary"
+                   id="sale-submit" />
+          </p>
+        </div>
+        <div class="wpcf7-response-output wpcf7-display-none"></div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal-thanks">
+  <div class="modal__container">
+
+    <div class="icon">
+      <svg>
+        <use xlink:href="./spritemap.svg#sprite-check"></use>
+      </svg>
+    </div>
+    <div class="modal__title">Спасибо</div>
+    <div class="modal__subtitle">Ваша заявка принята!
+      В ближайшее время с Вами свяжется наш специалист</div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+<script src="./js/custom.js"></script>
+</body>
+</html>
