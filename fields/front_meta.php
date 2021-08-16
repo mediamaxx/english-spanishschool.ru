@@ -325,4 +325,44 @@
 
                 ))
 
+
+                ->add_fields('section_information', 'Секция с информацией', array(
+
+                    Field::make( 'text', 'info_title', 'Заголовок' )
+                        ->set_default_value('Узнайте подробнее о каждом направлении школы')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'info_desc', 'Заголовок' )
+                        ->set_default_value('Лишь реплицированные с зарубежных источников, современные исследования набирают популярность среди определенных слоев населения, а значит, должны быть своевременно верифицированы. Лишь реплицированные с зарубежных источников, современные исследования ограничены исключительно образом мышления')
+                        ->set_width(100),
+
+                    Field::make( 'rich_text', 'info_desc_mobile', 'Заголовок' )
+                        ->set_default_value('Разнообразный и богатый опыт говорит нам, что современная методология разработки позволяет выполнить важные задания по разработке первоочередных требований')
+                        ->set_width(100),
+
+                    Field::make('complex', 'info_item', 'Информация о курсах')
+                        ->add_fields(array(
+                            Field::make( 'image', 'info_image', 'Фото' )
+                                ->set_width(100),
+
+                            Field::make( 'image', 'info_image_mobile', 'Фото (для телефонов)' )
+                                ->set_width(100),
+
+                            Field::make( 'text', 'info_link', 'Ссылка на информацию' )
+                                ->set_default_value('#')
+                                ->set_width(100),
+
+                            Field::make( 'select', 'info_lang', 'Язык' )
+                                ->set_width(10)
+                                ->set_options( $lang )
+                                ->set_default_value( 'english' ),
+
+                            Field::make( 'text', 'info_min_price', 'Минимальная цена' )
+                                ->set_default_value('4 500')
+                                ->set_width(100),
+
+                        )),
+
+                ))
+
         ));
