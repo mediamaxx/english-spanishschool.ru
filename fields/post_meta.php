@@ -26,7 +26,7 @@ Container::make('post_meta', 'Страница товара')
         ->set_width(80),
         Field::make('image', 'image', 'Изображение')
         ->set_width(100),
-        
+
 
         Field::make('rich_text', 'content_side', 'Текст под фото слева - без обтекания')
         ->set_width(50),
@@ -58,310 +58,88 @@ Container::make('post_meta', 'Страница товара')
 
 ));
 
-// добавление анонса Карточки товара
-Container::make('post_meta', 'Анонс товара')
-    ->where('post_type', '=', 'post')
-    ->or_where( 'post_template', '=', 'templates/page-product.php' )
-    ->set_context( 'side' )
-    ->add_fields( array(
-        Field::make( 'text', 'anons_name', 'Название на анонсе'),
-        Field::make('complex', 'anons_mark', 'Маркеры на анонсе')
-        ->add_fields(array(
-            Field::make( 'text', 'name', 'Название' )->set_width(50),
-            Field::make( 'color', 'color', 'Цвет' )->set_width(50),
-        ))        
-    ))
-;
-
-// страница Портфолио
-Container::make('post_meta', 'Портфолио')
-    ->where( 'post_template', '=', 'templates/page-portfolio.php' )
-    ->add_fields(array(
-        Field::make('select', 'title_status', 'Статус заголовка')
-        ->set_options( $tags ) 
-        ->set_default_value('h1') 
-        ->set_width(20),
-		Field::make('text', 'title_text', 'Текст заголовка')
-        ->set_width(80),
-
-        Field::make('separator', 'form', 'Настройки формы обратной связи' ),
-        Field::make('textarea', 'form_title', 'Заголовок формы')
-        ->set_width(75),
-        Field::make('image', 'form_image', 'Изображение формы')
-        ->set_width(25),
-
-        Field::make('separator', 'cont', 'Текстовая область после ФОС' ),
-        Field::make('rich_text', 'content', 'Контентная область')
-        ->set_width(100),
-
-
-    ))
-;
-
-// страница Кейс-портфолио
-Container::make('post_meta', 'Кейс-портфолио')
-    ->where( 'post_template', '=', 'templates/page-case.php' )
-    ->add_fields(array(
-        Field::make('separator', 'port', 'Основная информация' ),
-
-        Field::make('select', 'title_status', 'Статус заголовка')
-        ->set_options( $tags ) 
-        ->set_default_value('h1') 
-        ->set_width(20),
-
-		Field::make('text', 'title_text', 'Текст заголовка')
-        ->set_help_text('*Только для внутренней страницы')
-        ->set_width(80),
-      
-
-        Field::make('text', 'address', 'Адрес')
-        ->set_width(25),
-        Field::make('text', 'factory', 'Фабрика')
-        ->set_width(25),
-        Field::make('text', 'model', 'Модель')
-        ->set_width(25),
-        Field::make('text', 'price', 'Стоимость')
-        ->set_width(25),
-        Field::make('textarea', 'task', 'Задача')
-        ->set_help_text('*Только для внутренней страницы')
-        ->set_width(100),
-
-        Field::make('text', 'addone', 'Примечание*')
-        ->set_width(100),
-
-        Field::make('image', 'image', 'Изображение')
-        ->set_width(100),
-
-        Field::make( 'media_gallery', 'gallery', 'Галерея' )
-        ->set_type( array( 'image', 'image' ) )
-        ->set_help_text('*Подхватываются и для вывода на странице портфолио')
-        ->set_width(100),
-
-
-       
-
-
-
-        Field::make('separator', 'case', 'Решение' ),
-
-        Field::make('image', 'case_image', 'Изображение')
-        ->set_width(50),
-        Field::make('text', 'case_video', 'Ссылка на видео')
-        ->set_width(50),
-        Field::make('select', 'case_status', 'Статус заголовка')
-        ->set_options( $tags ) 
-        ->set_default_value('span') 
-        ->set_width(20),
-		Field::make('text', 'case_text', 'Текст заголовка')
-        ->set_default_value('Решение')
-        ->set_width(80),
-        Field::make('rich_text', 'content', 'Контентная область')
-        ->set_width(100),
-
-
-        
-        Field::make('separator', 'feed', 'Отзыв' ),
-
-        Field::make('select', 'feed_status', 'Статус заголовка')
-        ->set_options( $tags ) 
-        ->set_default_value('span') 
-        ->set_width(20),
-
-		Field::make('text', 'feed_text', 'Текст заголовка')
-        ->set_default_value('Отзыв клиента')
-        ->set_width(80),
-
-        Field::make('textarea', 'feed_mini', 'Соркащённый отзыв')
-        ->set_width(70)
-        ->set_help_text('*Укороченный текст отзыва на превью на странице "Портфолио"'),
-        Field::make('image', 'feed_image', 'Фото клиента')
-        ->set_width(30),
-        Field::make('textarea', 'feed_max', 'Развёрнутый отзыв')
-        ->set_width(100),
-
-        Field::make('text', 'feed_name', 'Имя клиента')
-        ->set_width(100),
-
-        
-       
-
-        Field::make( 'media_gallery', 'gallery_2', 'Галерея после отзыва' )
-        ->set_type( array( 'image', 'image' ) )
-        ->set_width(100),
-
-        Field::make('separator', 'fos', 'Форма обратной связи' ),
-
-        Field::make('checkbox', 'fos_disable', 'Выключить блок с ФОС?')
-        ->set_width(100),
-
-        Field::make('text', 'fos_text', 'Текст заголовка')  
-        ->set_default_value('Понравился дизайн? Закажи похожий!')      
-        ->set_width(100),
-
-        Field::make('rich_text', 'fos_caption', 'Подзаголовок')
-        ->set_default_value('Оставьте заявку на сайте и нам менеджер свяжется с Вами в ближайшее время!') 
-        ->set_width(100),
-	  
-        Field::make('text', 'btn_text', 'Текст')
-        ->set_default_value('Оставить заявку') 
-        ->set_width(50),
-
-
-
-    ))
-;
-
-
-// страница Команда
-Container::make('post_meta', 'Команда')
-    ->where( 'post_template', '=', 'templates/page-team.php' )
-    ->add_fields(array(
-        Field::make('select', 'title_status', 'Статус заголовка')
-        ->set_options( $tags ) 
-        ->set_default_value('h1') 
-        ->set_width(20),
-		Field::make('text', 'title_text', 'Текст заголовка')
-        ->set_width(80),
-
-
-        Field::make('separator', 'dir', 'Директор' ),
-        Field::make('text', 'dir_name', 'ФИО директора')
-        ->set_width(70),
-        Field::make('text', 'dir_position', 'Должность')
-        ->set_width(30),
-        Field::make( 'rich_text', 'dir_content', 'Цитата директора' )
-        ->set_width(75),
-        Field::make('image', 'dir_image', 'Фотография директора')
-        ->set_width(25),
-        Field::make('association', 'dir_link', 'Страница директора')
-        ->set_max(1)
-        ->set_types(array(
-            array(
-                'type' => 'post',
-                'post_type' => 'page'
-            )
-        )),
-
-        
-        Field::make('separator', 'team', 'Команда' ),
-        Field::make('select', 'team_status', 'Статус заголовка')
-        ->set_options( $tags ) 
-        ->set_default_value('h2') 
-        ->set_width(20),
-		Field::make('text', 'team_text', 'Текст заголовка')
-        ->set_width(80),
-        Field::make('complex', 'team_list', 'Команда')
-        ->add_fields(array(
-            Field::make('text', 'name', 'ФИО члена команды')
-            ->set_width('60'),
-            Field::make('text', 'position', 'Должность')
-            ->set_width('40'),
-            Field::make('image', 'image', 'Фотография')
-            ->set_width('30'),
-            Field::make('association', 'link', 'Ссылка')
-            ->set_width('70')
-            ->set_max(1)
-            ->set_types(array(
-                array(
-                    'type' => 'post',
-                    'post_type' => 'page'
-                ))                
-            ),
-
-        )),
-
-
-        Field::make('separator', 'fos', 'Форма обратной связи' ),
-
-        Field::make('checkbox', 'fos_disable', 'Выключить блок с ФОС?')
-        ->set_width(100),
-
-        Field::make('text', 'fos_text', 'Текст заголовка')  
-     
-        ->set_width(100),
-
-        Field::make('rich_text', 'fos_caption', 'Подзаголовок')
-        
-        ->set_width(100),
-	  
-        Field::make('text', 'btn_text', 'Текст')
-        ->set_default_value('Оставить заявку') 
-        ->set_width(50),
-
-
-
-    ))
-;
-
 // страница Контакты
 Container::make('post_meta', 'Страница контакты')
-    ->where( 'post_template', '=', 'templates/page-kontakty.php' )
+    ->where( 'post_template', '=', 'templates/page_contacts.php' )
     ->add_fields(array(
-        Field::make( 'select', 'title_state', 'Статус заголовка' )
-            ->set_options( $tags ) 
-            ->set_width(20)              
-            ->set_default_value( 'span' ),
         Field::make('text', 'title', 'Заголовок')
-            ->set_width(80), 
-        Field::make('text', 'address', 'Адрес')
+            ->set_default_value('Контакты школы')
             ->set_width(50),
-        Field::make('textarea', 'hours', 'Часы работы')
+
+        Field::make('text', 'hidden_subtitle', 'Скрытый подзаголовок')
+            ->set_default_value('English & Spanish School')
             ->set_width(50),
-        Field::make('complex', 'phones', 'Телефоны')
-            ->add_fields(array(
-                Field::make('text', 'phone', 'Телефон')
-                    ->set_attribute( 'placeholder', '+7 (***) ***-****' )
-            ))
-            ->setup_labels(array('plural_name' => 'Телефоны', 'singular_name' => 'телефон')),
-        Field::make('text', 'mail', 'Почта'),
-        Field::make('complex', 'list_social', 'Соц.сети')
-            ->add_fields(array(
-                Field::make('image', 'icon_social', 'Иконка соц.сети')
-                    ->set_width(30),
-                Field::make('text', 'link_social', 'Введите ссылку')
-                    ->set_attribute('placeholder', 'vk.com/company_group')
-                    ->set_width(70),
-            ))
-            ->set_max(5)
-            ->setup_labels(array('plural_name' => 'Соц.сеть', 'singular_name' => 'соц.сеть')),        
-        Field::make('text', 'coord_1', 'Координаты - Широта')->set_width(50),
-        Field::make('text', 'coord_2', 'Координаты - Долгота')->set_width(50),
-        Field::make('image', 'image', 'Изображение'),
-        Field::make('image', 'map_image', 'Изображение на карте')->set_width(50),
-        Field::make('textarea', 'map_text', 'Текст на карте')
+
+        Field::make('text', 'subtitle', 'Подзаголовок')
+            ->set_default_value('Наш адрес')
             ->set_width(50),
-        ))
-;
+
+        Field::make('text', 'index', 'Индекс')
+            ->set_default_value('Наш адрес')
+            ->set_width(50),
+
+        Field::make('text', 'country', 'Страна')
+            ->set_default_value('Наш адрес')
+            ->set_width(50),
+
+        Field::make('text', 'city', 'Город')
+            ->set_default_value('г. Калининград')
+            ->set_width(50),
+
+        Field::make('text', 'street', 'Город')
+            ->set_default_value('г. Калининград')
+            ->set_width(50),
+
+        Field::make('text', 'address', 'Дом, корпус, этаж')
+            ->set_default_value('д.45, корпус 5, 3 этаж')
+            ->set_width(50),
+
+        Field::make('text', 'email', 'E-mail')
+            ->set_default_value('dinatkatch@mail.ru')
+            ->set_width(50),
+
+        Field::make('text', 'phone', 'Номер телефона')
+            ->set_default_value('+78005679800')
+            ->set_width(50),
+
+        Field::make('text', 'rec_text', 'Номер телефона')
+            ->set_default_value('Перезвоните мне')
+            ->set_width(50),
+
+        Field::make('text', 'rec_link', 'Номер телефона')
+            ->set_default_value('#modal-record')
+            ->set_width(50),
 
 
+        Field::make('text', 'inst_link', 'Ссылка на Ваш Instagram')
+            ->set_default_value('https://www.instagram.com/')
+            ->set_width(50),
 
-// страница Новости
-Container::make('post_meta', 'Страница новости')
-    ->where('post_template', '=', 'templates/page-news.php')
-    ->add_fields(array(
-        Field::make( 'select', 'title_state', 'Статус заголовка' )
-            ->set_options( $tags ) 
-            ->set_width(10)              
-            ->set_default_value( 'h1' ),
-        Field::make( 'text', 'title', 'Заголовок' )
-            ->set_width(90),
-        Field::make( 'rich_text', 'content', 'Описание' )
-            ->set_width(100),
-        Field::make( 'rich_text', 'content_2', 'Описание после вывода постов' )
-            ->set_width(100),   
-    ))
-;
+        Field::make('text', 'vk_link', 'Ссылка на Ваш VK')
+            ->set_default_value('https://vk.com/')
+            ->set_width(50),
 
+        Field::make('text', 'whatsapp_link', 'Ссылка на Ваш Whatsapp')
+            ->set_default_value('https://www.whatsapp.com/')
+            ->set_width(50),
 
-// добавление анонса и параметра даты всем страницам
-Container::make('post_meta', 'Анонс')
-    ->where('post_template', '=', 'page.php')
-    ->set_context( 'side' )
-    ->add_fields( array(
-        Field::make( 'textarea', 'anons' , 'Анонс' ),
-        Field::make( 'checkbox', 'date', 'Скрыть дату')
-    ))
-;
+        Field::make('text', 'tg_link', 'Ссылка на Ваш Telegram')
+            ->set_default_value('https://web.telegram.org/')
+            ->set_width(50),
+
+        Field::make('text', 'viber_link', 'Ссылка на Ваш Viber')
+            ->set_default_value('https://www.viber.com/')
+            ->set_width(50),
+
+        Field::make('text', 'look_link', 'Ссылка на онлайн карту')
+            ->set_default_value('https://yandex.ru/maps/22/kaliningrad/?from=api-maps&ll=20.485378%2C54.714219&mode=usermaps&origin=jsapi_2_1_79&um=constructor%3Aadab3e1191e34cdf8f1c4e2c53704cb308511db9379cb9eeb65f9c39f2ff2b62&z=14')
+            ->set_width(50),
+
+        Field::make('text', 'look_text', 'Текст для ссылки на онлайн карту')
+            ->set_default_value('Посмотреть на онлайн карте')
+            ->set_width(50),
+        ));
+
 
 
 
