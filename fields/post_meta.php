@@ -119,6 +119,33 @@ Container::make('post_meta', 'Страница услуг')
             ))
 
 
+            ->add_fields('services', 'Перечень услуг', array(
+
+                Field::make( 'text', 'serv_title', 'Заголовок' )
+                    ->set_default_value('Мы предлагаем обучение у нас')
+                    ->set_width(100),
+
+                Field::make('complex', 'serv_content', 'Содержание статьи')
+                    ->add_fields(array(
+
+                        Field::make('image', 'service_background_image', 'Фоновая фотография')
+                            ->set_width(50),
+
+                        Field::make( 'text', 'serv_link', 'Ссылка' )
+                            ->set_default_value('#')
+                            ->set_width(50),
+
+                        Field::make( 'text', 'serv_point', 'Для кого предназначен курс' )
+                            ->set_default_value('Для детей')
+                            ->set_width(50),
+
+                    )),
+
+
+
+            ))
+
+
     ));
 
 // страница Контакты
