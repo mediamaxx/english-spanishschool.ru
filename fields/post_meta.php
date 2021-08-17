@@ -256,6 +256,258 @@ Container::make('post_meta', 'Страница услуг')
             ))
 
 
+            ->add_fields('section_record', 'Форма записи', array(
+
+                Field::make( 'rich_text', 'form_title', 'Заголовок' )
+                    ->set_default_value('Запишитесь на <span>бесплатное пробное занятие</span> с директором')
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'form_subtitle', 'Заголовок' )
+                    ->set_default_value('На занятиях мы познакомимся и покажем как происходят занятия.
+                    Вы узнаете свой уровень языка и получите скидку')
+                    ->set_width(100),
+
+
+                Field::make('complex', 'form_item', 'Языки (низ)')
+                    ->set_max(3)
+                    ->add_fields(array(
+                        Field::make( 'image', 'form_icon', 'Иконка' )
+                            ->set_width(100),
+
+                        Field::make( 'textarea', 'form_text', 'Текст' )
+                            ->set_default_value('Обучение:
+                Skype или очно')
+                            ->set_width(100),
+
+                    )),
+
+
+
+
+            ))
+
+
+            ->add_fields('section_teachers', 'Слайдер с преподавателями', array(
+
+                Field::make( 'text', 'teachers_title', 'Заголовок' )
+                    ->set_default_value('Талантливые преподаватели')
+                    ->set_width(100),
+
+
+                Field::make('complex', 'teachers', 'Языки (низ)')
+                    ->set_max(3)
+                    ->add_fields(array(
+                        Field::make( 'image', 'teach_image', 'Фотография преподавателя' )
+                            ->set_width(100),
+
+                        Field::make( 'text', 'teach_surname', 'Фамилия' )
+                            ->set_default_value('Ткач')
+                            ->set_width(100),
+
+                        Field::make( 'text', 'teach_name', 'Имя и Отчество' )
+                            ->set_default_value('Дина Игоревна')
+                            ->set_width(100),
+
+                        Field::make( 'text', 'teach_position', 'Должность' )
+                            ->set_default_value('Директор, преподаватель английского и испанского')
+                            ->set_width(100),
+
+                        Field::make( 'text', 'teach_exp', 'Стаж' )
+                            ->set_default_value('5 лет')
+                            ->set_attribute( 'placeholder', '4 года // 7 лет и т.д.' )
+                            ->set_width(100),
+
+                        Field::make( 'rich_text', 'teach_desc', 'Небольшое описание' )
+                            ->set_default_value('Разнообразный и богатый опыт говорит нам, что современная методология разработки позволяет выполнить важные задания по разработке первоочередных требований. Идейные соображения высшего порядка, а также сложившаяся структура организации создаёт предпосылки для первоочередных требований. Внезапно, действия представителей оппозиции лишь добавляют фракционных разногласий и ассоциативно распределены по отраслям.')
+                            ->set_width(100),
+
+                    )),
+
+
+
+
+            ))
+
+
+            ->add_fields('section_lessons', 'Секция Уроки', array(
+
+                Field::make( 'text', 'lessons_title', 'Заголовок' )
+                    ->set_default_value('Как проходят наши уроки')
+                    ->set_width(100),
+
+                Field::make( 'image', 'lessons_image', 'Картинка' )
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'lessons_text', 'Текст' )
+                    ->set_default_value('Предварительные выводы неутешительны: высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса соответствующих условий активизации. Как уже неоднократно упомянуто, сделанные на базе интернет-аналитики выводы, вне зависимости от их уровня, должны быть призваны к ответу. Но высокое качество позиционных исследований требует определения и уточнения существующих финансовых и административных условий. С другой стороны, социально-экономическое развитие обеспечивает актуальность кластеризации усилий. Повседневная практика показывает, что реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании ')
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'lessons_link_sertificates', 'Ссылка на сертификаты' )
+                    ->set_default_value('#')
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'lessons_text_sertificates', 'Ссылка на сертификаты' )
+                    ->set_default_value('Сертификаты')
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'lessons_link_about', 'Ссылка на подробности о компании' )
+                    ->set_default_value('#')
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'lessons_text_about', 'Ссылка на подробности о компании' )
+                    ->set_default_value('Подробнее о компании')
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'lessons_text_socials', 'Подпись для соцсетей' )
+                    ->set_default_value('Подписывайтесь на соцсети: ')
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'lessons_inst_link', 'Ссылка Instagram' )
+                    ->set_default_value('#')
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'lessons_vk_link', 'Ссылка VK' )
+                    ->set_default_value('#')
+                    ->set_width(100),
+
+
+                Field::make('complex', 'lessons_gallery', 'Галлерея')
+                    ->add_fields(array(
+                        Field::make( 'image', 'gallery_image', 'Изображение' )
+                            ->set_width(100),
+
+                    )),
+
+                Field::make( 'rich_text', 'lessons_text_mobile', 'Текст (для телефонов)' )
+                    ->set_default_value('В процессе обучения всегда участвует команда, состоящая из преподавателя и ученика. Именно командный подход приносит наилучшие результаты')
+                    ->set_width(100),
+
+
+            ))
+
+
+            ->add_fields('services_record_bottom', 'Есть ли вопросы', array(
+
+                Field::make( 'rich_text', 'record_title', 'Заголовок' )
+                    ->set_default_value('У Вас есть <span class="highlight">вопросы</span> по обучению ?')
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'record_subtitle', 'Подзаголовок' )
+                    ->set_default_value('Оставьте заявку и мы перезвоним Вам в блищайшее время!
+                    Или оставте свой вопрос, нажав на кнопку “Оставить вопрос” и мы ответим в течение 12 часов. ')
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'record_subtitle_mobile', 'Заголовок' )
+                    ->set_default_value('Оставьте заявку на <strong>бесплатный пробный урок</strong> английского языка
+                    Мы видим все заявки и обязательно с вами свяжемся')
+                    ->set_width(100),
+
+                Field::make( 'text', 'record_socials_title', 'Заголовок для соцсетей' )
+                    ->set_default_value('Вы можете также написать нам в чатменеджерах:')
+                    ->set_width(100),
+
+                Field::make( 'text', 'record_socials_whatsapp', 'Ссылка Whatsapp' )
+                    ->set_default_value('https://www.whatsapp.com/')
+                    ->set_width(30),
+
+                Field::make( 'text', 'record_socials_tg', 'Ссылка Telegram' )
+                    ->set_default_value('https://web.telegram.org/')
+                    ->set_width(30),
+
+                Field::make( 'text', 'record_socials_viber', 'Ссылка Viber' )
+                    ->set_default_value('https://www.viber.com/')
+                    ->set_width(30),
+
+
+                Field::make('complex', 'record_btn', 'Галлерея')
+                    ->set_max(2)
+                    ->add_fields(array(
+                        Field::make( 'text', 'btn_link', 'Ссылка кнопки' )
+                            ->set_default_value('#modal-record')
+                            ->set_width(30),
+
+                        Field::make( 'text', 'btn_text', 'Текст кнопки' )
+                            ->set_default_value('Заказать звонок')
+                            ->set_width(30),
+
+                    )),
+
+            ))
+
+
+            ->add_fields('section_reviews', 'Секция отзывов', array(
+
+                Field::make( 'text', 'review_title', 'Заголовок' )
+                    ->set_default_value('Отзывы учеников')
+                    ->set_width(100),
+
+
+                Field::make('complex', 'reviews', 'Отзывы')
+                    ->add_fields(array(
+                        Field::make( 'image', 'review_image', 'Фото' )
+                            ->set_width(100),
+
+                        Field::make( 'text', 'review_name', 'Фамилия и Имя отзыва' )
+                            ->set_default_value('Екатерина Макарова')
+                            ->set_width(100),
+
+                        Field::make('complex', 'review_item', 'Достижения')
+                            ->add_fields(array(
+                                Field::make( 'text', 'review_achievement', 'Достижение' )
+                                    ->set_default_value('Окончила курс В1 (испанский язык)')
+                                    ->set_width(100),
+
+                            )),
+
+                        Field::make( 'rich_text', 'review_text', 'Текст отзыва' )
+                            ->set_default_value('Многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть верифициров Таким образом, новая модель организационной деятельности прекрасно подходит для реализации существующих финансовых и административных условий. Каждый из нас понимает очевидную вещь: выбранный нами инновационный путь, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для системы массового участия. И нет сомнений, что явные признаки победы институционализации, инициированные исключительно синтетически')
+                            ->set_width(100),
+
+                    )),
+
+
+
+
+
+
+                Field::make( 'text', 'review_btn_text', 'Кнопка "Все Отзывы"' )
+                    ->set_default_value('Читать все отзывы')
+                    ->set_width(100),
+
+                Field::make( 'text', 'review_btn_link', 'Ссылка на все отзывы' )
+                    ->set_default_value('#')
+                    ->set_width(100),
+
+
+                Field::make( 'text', 'comment_btn_text', 'Кнопка "Оставить отзыв"' )
+                    ->set_default_value('Оставить свой отзыв')
+                    ->set_width(100),
+
+                Field::make( 'text', 'comment_btn_link', 'Ссылка на комментарий' )
+                    ->set_default_value('#')
+                    ->set_width(100),
+
+
+            ))
+
+
+            ->add_fields('seo_section', 'Секция с СЕО', array(
+
+                Field::make( 'text', 'seo_title', 'Заголовок' )
+                    ->set_default_value('СЕО БЛОК')
+                    ->set_width(100),
+
+                Field::make( 'rich_text', 'seo_text', 'СЕО текст' )
+                    ->set_default_value('Многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть верифициров Таким образом, новая модель организационной деятельности прекрасно подходит для реализации существующих финансовых и административных условий. Каждый из нас понимает очевидную вещь: выбранный нами инновационный путь, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для системы массового участия. И нет сомнений, что явные признаки победы институционализации, инициированные исключительно синтетически.
+                <br>
+                <br>
+                Таким образом, новая модель организационной деятельности прекрасно подходит для реализации существующих финансовых и административных условий. Каждый из нас понимает очевидную вещь: выбранный нами инновационный путь')
+                    ->set_width(100),
+
+
+            ))
+
+
     ));
 
 // страница Контакты
