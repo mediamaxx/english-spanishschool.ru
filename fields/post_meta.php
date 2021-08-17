@@ -183,6 +183,48 @@ Container::make('post_meta', 'Страница услуг')
             ))
 
 
+            ->add_fields('services_price', 'Цены', array(
+
+                Field::make( 'text', 'price_title', 'Заголовок' )
+                    ->set_default_value('Стоимость обучения')
+                    ->set_width(50),
+
+                Field::make( 'rich_text', 'price_subtitle', 'Подзаголовок' )
+                    ->set_default_value('Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции обеспечивает актуальность приоритизации разума над эмоциями. Банальные, но неопровержимые выводы, а также активно развивающиеся страны третьего мира, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут представлены в исключительно положительном свете. С другой стороны, начало повседневной работы по формированию позиции способствует повышению качества направлений прогрессивного развития.')
+                    ->set_width(50),
+
+
+                Field::make('complex', 'price_item', 'Услуга - цена')
+                    ->set_max(4)
+                    ->add_fields(array(
+
+                        Field::make('text', 'price_item_title', 'Заголовок элемента')
+                            ->set_default_value('бесплатный урок')
+                            ->set_width(50),
+
+                        Field::make( 'text', 'price_item_minutes', 'Количество минут' )
+                            ->set_default_value('40')
+                            ->set_width(50),
+
+                        Field::make( 'text', 'price_item_lessons', 'Количество занятий в месяц' )
+                            ->set_default_value('1')
+                            ->set_width(50),
+
+                        Field::make( 'text', 'price_item_value', 'Цена в месяц' )
+                            ->set_default_value('4 500 руб./мес')
+                            ->set_width(50),
+
+                        Field::make( 'text', 'price_item_btn_text', 'Текст кнопки' )
+                            ->set_default_value('Записаться')
+                            ->set_width(50),
+
+                    )),
+
+
+
+            ))
+
+
     ));
 
 // страница Контакты
