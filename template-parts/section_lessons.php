@@ -23,8 +23,13 @@ $arResult = [
         <div class="lessons__wrapper">
             <div class="lessons__content">
                 <div class="lessons__text">
-                    <a href="<?= $arResult['lessons_image']?>" class="lessons__media">
-                        <img src="<?= $arResult['lessons_image']?>" alt="Как проходят наши уроки">
+                    <?php
+                    $imaged = [
+                        'full' => wp_get_attachment_image_url($arResult['lessons_image'], 'full'),
+                    ];
+                    ?>
+                    <a href="<?= $imaged['full']?>" class="lessons__media">
+                        <img src="<?= $imaged['full']?>" alt="Как проходят наши уроки">
                         <span class="play" aria-label="Посмотреть видео"></span>
                     </a>
                     <p><?= $arResult['lessons_text']?></p>

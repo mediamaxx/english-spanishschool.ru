@@ -13,10 +13,14 @@ $arResult = [
         <div class="teachers__inner">
             <div class="teachers__list list-reset">
 
-                <?php foreach ($arResult['teachers'] as $item):?>
+                <?php foreach ($arResult['teachers'] as $item):
+                    $image = [
+                        'full' => wp_get_attachment_image_url($item['teach_image'], 'full'),
+                    ];
+                    ?>
 
                     <div class="teachers__item">
-                        <a href="<?= $item['teach_image']?>"><img src="<?= $item['teach_image']?>" alt="<?= $item['teach_surname']?> <?= $arResult['teach_name']?>" class="teachers__photo"></a>
+                        <a href="<?= $image['full']?>"><img src="<?= $image['full']?>" alt="<?= $item['teach_surname']?> <?= $arResult['teach_name']?>" class="teachers__photo"></a>
                         <div class="teachers__card">
                             <div class="teachers__name"><?= $item['teach_surname']?>
                                 <span><?= $item['teach_name']?></span>

@@ -15,10 +15,14 @@ $arResult = [
                 <div class="record__title record__title--main section-title"><?= $arResult['form_title']?></div>
                 <div class="record__subtitle record__subtitle--main"><?= $arResult['form_subtitle']?></div>
                 <ul class="record__descr list-reset">
-                    <?php foreach ($arResult['form_item'] as $item):?>
+                    <?php foreach ($arResult['form_item'] as $item):
+                        $image = [
+                            'full' => wp_get_attachment_image_url($item['form_icon'], 'full'),
+                        ];
+                        ?>
 
                         <li class="record__descr-item">
-                            <span class="icon" style="background-image: url(<?= $item['form_icon']?>);"></span>
+                            <span class="icon" style="background-image: url(<?= $image['full']?>);"></span>
                             <span><?= $item['form_text']?></span>
                         </li>
 
