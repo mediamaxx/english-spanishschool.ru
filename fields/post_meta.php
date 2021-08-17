@@ -225,6 +225,37 @@ Container::make('post_meta', 'Страница услуг')
             ))
 
 
+            ->add_fields('services_progress', 'Прогресс', array(
+
+                Field::make( 'text', 'progress_title', 'Заголовок' )
+                    ->set_default_value('Ваш прогресс после курса')
+                    ->set_width(50),
+
+                Field::make( 'rich_text', 'progress_subtitle', 'Подзаголовок' )
+                    ->set_default_value('Многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть верифициров')
+                    ->set_width(50),
+
+
+                Field::make('complex', 'progress_item', 'Чему вы научитесь')
+                    ->set_max(3)
+                    ->add_fields(array(
+
+                        Field::make('image', 'progress_image', 'Иконка')
+                            ->set_width(50),
+
+                        Field::make('text', 'progress_item_title', 'Преимущество')
+                            ->set_default_value('Увеличите словарный запас не менее, чем на 4000 слов')
+                            ->set_width(50),
+
+
+
+                    )),
+
+
+
+            ))
+
+
     ));
 
 // страница Контакты
