@@ -5,17 +5,10 @@ get_header();
 ?>
 
 
-<main class="main">				
+<main class="page-main page-404">
 
-    <div class="not-found" style="background-image: url('<?= _assets(); ?>/img/404.jpg');">
-
-        <div class="container">	
-            <div class="not-found-block">														
-                <div class="not-found__title">Страница <br>не найдена</div>
-                <div class="not-found__back">Вернуться на <a href="/">главную страницу</a></div>
-            </div>								
-        </div>
-    </div>
+    <div class="page-404__title">К сожалению, страница, которую Вы ищете <strong>удалена</strong> или её не существует</div>
+    <a href="/" class="link page-404__link">Вернуться на главную страницу</a>
 
 </main>
 
