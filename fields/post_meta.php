@@ -13,50 +13,65 @@ $tags = array(
     'p'     => 'p',
   );
 
-//страница Карточка товара
-Container::make('post_meta', 'Страница товара')
+$lists = array(
+    'ul'  => 'ul',
+    'ol'  => 'ol',
+);
+
+//страница Одна новость
+Container::make('post_meta', 'Страница одной новости')
     ->where('post_type', '=', 'post')
-    ->or_where( 'post_template', '=', 'templates/single-product.php' )
+    ->or_where( 'post_template', '=', 'templates/single_news.php' )
     ->add_fields(array(
-        Field::make('select', 'title_status', 'Статус заголовка')
-        ->set_options( $tags ) 
-        ->set_default_value('h1') 
-        ->set_width(20),
-		Field::make('text', 'title_text', 'Текст заголовка')
-        ->set_width(80),
-        Field::make('image', 'image', 'Изображение')
-        ->set_width(100),
+
+        Field::make('complex', 'news_content', 'Содержание статьи')
+            ->add_fields(array(
+                Field::make('select', 'news_status', 'Статус заголовка')
+                    ->set_options( $tags )
+                    ->set_default_value('h1')
+                    ->set_width(20),
+                Field::make('rich_text', 'news_text', 'Текст внутри заголовка')
+                    ->set_width(80),
+                Field::make('image', 'news_image', 'Изображение')
+                    ->set_width(100),
+
+            )),
 
 
-        Field::make('rich_text', 'content_side', 'Текст под фото слева - без обтекания')
-        ->set_width(50),
+        Field::make('complex', 'news_list', 'Список')
+            ->add_fields(array(
+                Field::make('select', 'news_list_status', 'Выберите тип списка: маркированный (точка) - ul, Нумерованный (порядковое число) - ol')
+                    ->set_options( $lists )
+                    ->set_width(20),
 
-        Field::make('complex', 'chars', 'Характеристики')
-        ->add_fields(array(
-            Field::make( 'text', 'name', 'Название' )->set_width(50),
-            Field::make( 'text', 'caption', 'Значение' )->set_width(50),
-        ))
-        ->set_width(50),
+                Field::make('complex', 'news_list_item', 'Элемент списка')
+                    ->add_fields(array(
+                        Field::make('rich_text', 'news_list_item_text', 'Текст внутри списка')
+                            ->set_width(50),
 
-        Field::make('text', 'regular_price', 'Основная цена')
-        ->set_width(50),
-        Field::make('text', 'old_price', 'Старая цена')
-        ->set_width(50),
+                    )),
 
-        Field::make('rich_text', 'content', 'Контентная область под фото - на всю ширину')
-        ->set_width(100),
 
-        Field::make( 'media_gallery', 'gallery', 'Галерея' )
-        ->set_type( array( 'image', 'image' ) )
-        ->set_width(100),
 
-        Field::make('checkbox', 'similiar', 'Скрыть похожие?')
-        ->set_width(100),
+            )),
 
-        Field::make('rich_text', 'content_2', 'Контентная область')
-        ->set_width(100),
+        Field::make('rich_text', 'news_quote', 'Цитата')
+            ->set_default_value('Задача организации, в особенности же разбавленное изрядной долей эмпатии, рациональное мышление влечет за собой процесс внедрения и модернизации позиций.')
+            ->set_width(80),
 
-));
+
+
+        Field::make('complex', 'news_table', 'Таблица "Услуга - цена"')
+            ->add_fields(array(
+                Field::make('text', 'news_column_service', 'Название услуги')
+                    ->set_width(50),
+
+                Field::make('text', 'news_column_price', 'Цена (укажите только число)')
+                    ->set_width(50),
+
+            )),
+
+    ));
 
 // страница Контакты
 Container::make('post_meta', 'Страница контакты')
