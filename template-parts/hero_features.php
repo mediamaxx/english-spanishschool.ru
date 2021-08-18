@@ -19,10 +19,14 @@ $arResult = [
             <div class="hero__text"><?= $arResult['title_text']?></div>
             <div class="hero__features-container">
                 <div class="hero__features list-reset">
-                    <?php foreach ($arResult['list'] as $item):?>
+                    <?php foreach ($arResult['list'] as $item):
+                        $image = [
+                            'full' => wp_get_attachment_image_url($item['list'], 'full'),
+                        ];
+                        ?>
 
                         <div class="hero__features-item">
-                            <span class="icon" style="background-image: url(<?= wp_get_attachment_url($item['image'], 'full') ?>);"></span>
+                            <span class="icon" style="background-image: url(<?= $image['full'] ?>);"></span>
                             <span><?= $item['text']?></span>
                         </div>
 
