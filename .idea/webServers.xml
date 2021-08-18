@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="de81ed04-0cfc-40dc-bb46-b547e0cde8dc" name="english-schools.ru" url="http://english-schools.mts3.ru/">
-        <fileTransfer rootFolder="/www/english-schools.ru/wp-content/themes/english-schools.ru" host="english-schools.mts3.ru" port="21">
+        <fileTransfer host="english-schools.mts3.ru" port="21">
           <advancedOptions>
             <advancedOptions controlEncoding="utf-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

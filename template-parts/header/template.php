@@ -28,13 +28,22 @@ $image = [
 ];
 ?>
 
-<header class="page-header">
+<header class="page-header" <?php if(is_user_logged_in()) echo 'style="margin-top:32px;"' ?>>
     <div class="container">
-        <?php if ( ($image['full']) || ($image['alt'])): ?>
-            <a href="/" class="page-header__logo">
-                <img src="<?= $image['full'] ?>" alt="<?= $image['alt'] ?>">
-            </a>
-        <?php endif;?>
+        <?php if(!is_front_page()): ?>
+            <?php if ( ($image['full']) || ($image['alt'])): ?>
+                <a href="/" class="page-header__logo">
+                    <img src="<?= $image['full'] ?>" alt="<?= $image['alt'] ?>">
+                </a>
+            <?php endif;?>
+        <?php else: ?>
+            <?php if ( ($image['full']) || ($image['alt'])): ?>
+                <a href="" class="page-header__logo">
+                    <img src="<?= $image['full'] ?>" alt="<?= $image['alt'] ?>">
+                </a>
+            <?php endif;?>
+        <?php endif; ?>
+
         <?php if ($arResult['header_desc']):?>
             <div class="page-header__locality">
                 <svg>
