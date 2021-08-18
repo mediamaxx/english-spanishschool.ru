@@ -11,7 +11,7 @@ $arResult = [
 
 <section class="information">
     <div class="container">
-        <div class="information__title section-title"><?= $arResult['$item']?></div>
+        <div class="information__title section-title"><?= $arResult['info_title']?></div>
         <div class="information__description information__description--xl">
             <p><?= $arResult['info_desc']?></p>
         </div>
