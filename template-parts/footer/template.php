@@ -4,7 +4,7 @@ $arResult = [
     'footer_logo_first' => [
         'full' => wp_get_attachment_image_url(carbon_get_theme_option( 'footer_logo_first' ), 'full'),
         'alt' => get_post_meta(carbon_get_theme_option( 'footer_logo_first' ), '_wp_attachment_image_alt', TRUE),
-    ],  
+    ],
     'footer_phone' => carbon_get_theme_option( 'footer_phone' ),
     'footer_title' => carbon_get_theme_option( 'footer_title' ),
     'footer_mail' => carbon_get_theme_option( 'footer_mail' ),
@@ -110,7 +110,7 @@ $arResult = [
             <a href="http://mtsite.ru" class="page-footer__powered dev-link" rel=”nofollow”>
                 <span class="dev-link__text">Сделано в веб-студии "Мультисайт" Разработка и продвижение сайтов</span>
                 <span class="dev-link__img">
-            <img src="./img/mtsite.png" alt="Сделано в веб-студии Мультисайт">
+            <img src="<?= _assets(); ?>/img/mtsite.png" alt="Сделано в веб-студии Мультисайт">
           </span>
             </a>
         </div>
