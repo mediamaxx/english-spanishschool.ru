@@ -24,7 +24,7 @@ $arResult = [
                     </div>
                     <div class="products__bottom">
                         <div class="products__name"><?= $item['tabs_lang']?></div>
-                        <div class="products__price">от <?= $item['tabs_link']?> руб.</div>
+                        <div class="products__price">от <?= $item['min_price']?> руб.</div>
                     </div>
                 </div>
 
