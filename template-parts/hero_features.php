@@ -21,7 +21,7 @@ $arResult = [
                 <div class="hero__features list-reset">
                     <?php foreach ($arResult['list'] as $item):
                         $image = [
-                            'full' => wp_get_attachment_image_url($item['list'], 'full'),
+                            'full' => wp_get_attachment_image_url($item['icon'], 'full'),
                         ];
                         ?>
 
