@@ -31,7 +31,12 @@ $arResult = [
                 'walker'          => new walker_bem_footer_menu_top('menu'),
             ) );
             ?>
-            <a href="tel:<?= $arResult['footer_phone'] ?>" class="page-footer__phone phone"><?= $arResult['footer_phone'] ?></a>
+            <?php if ($arResult['footer_phone']):
+                $link = preg_replace( array( '/\s/', '/\(/', '/\)/', '/-/' ), '', $arResult['footer_phone'] );
+                $text = $arResult['footer_phone'];
+                ?>
+                <a href="tel:<?= $link; ?>" class="page-footer__phone phone"><?= $text; ?></a>
+            <?php endif; ?>
         </div>
         <div class="page-footer__middle">
             <div class="page-footer__middle-left">
