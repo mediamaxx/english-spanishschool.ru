@@ -12,8 +12,8 @@ $arResult = [
 
 <section class="products">
     <div class="container">
-        <div class="products__title section-title"><?= $arResult['title']?></div>
-        <div class="products__subtitle"><?= $arResult['title']?></div>
+        <div class="products__title section-title"><?= $arResult['banner_title']?></div>
+        <div class="products__subtitle"><?= $arResult['banner_subtitle']?></div>
         <div class="products__grid">
 
             <?php foreach ($arResult['tabs_top'] as $item):?>
