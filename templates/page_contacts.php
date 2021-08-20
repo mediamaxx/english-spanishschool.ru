@@ -40,7 +40,9 @@ $arResult = [
 
     <section class="main-block">
         <div class="container">
+            <?php if ($arResult['title']): ?>
             <div class="main-block__title section-title"><?= $arResult['title'];?></div>
+            <?php endif; ?>
             <div class="main-block__inner">
                 <div class="main-block__list list-reset">
                     <div class="main-block__item">
@@ -49,8 +51,13 @@ $arResult = [
                         </div>
                         <div class="main-block__card vcard">
                             <div class="main-block__card-inner">
+                                <?php if ($arResult['hidden_subtitle']): ?>
                                 <div class="fn org hidden visually-hidden"><?= $arResult['hidden_subtitle'];?></div>
+                                <?php endif; ?>
+                                <?php if ($arResult['subtitle']):?>
                                 <div class="main-block__subtitle"><?= $arResult['subtitle'];?></div>
+                                <?php endif;?>
+                                <?php if ($arResult['index']||$arResult['country']||$arResult['city']||$arResult['street']||$arResult['address']||$arResult['email']): ?>
                                 <div class="adr">
                                     <span class="index"><?= $arResult['index'];?></span>
                                     <span class="country"><?= $arResult['country'];?></span>
@@ -58,9 +65,15 @@ $arResult = [
                                     <span class="extended-address"><?= $arResult['address'];?></span>
                                     <a href="mailto:<?= $arResult['email'];?>" class="email email-link"><?= $arResult['email'];?></a>
                                 </div>
+                                <?php endif;?>
+                                <?php if ($arResult['phone']):?>
                                 <div class="main-block__subtitle">Номер телефона:</div>
                                 <a href="tel:<?= $arResult['phone'];?>" class="phone tel"><?= $arResult['phone'];?></a>
+                                <?php endif;?>
+                                <?php if ($arResult['rec_link']||$arResult['rec_text']):?>
                                 <a href="<?= $arResult['rec_link'];?>" class="link"><?= $arResult['rec_text'];?></a>
+                                <?php endif;?>
+                                <?php if ($arResult['inst_link']||$arResult['vk_link']||$arResult['whatsapp_link']||$arResult['tg_link']||$arResult['viber_link']):?>
                                 <div class="main-block__subtitle">Мы в соцсетях:</div>
                                 <div class="main-block__socials list-reset">
                                     <a href="<?= $arResult['inst_link'];?>" class="main-block__socials-link socials-link" aria-label="Напишите нам в Instagram">
@@ -89,11 +102,14 @@ $arResult = [
                                         </svg>
                                     </a>
                                 </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php if ($arResult['look_link']||$arResult['look_text']):?>
                 <a href="<?= $arResult['look_link'];?>" class="main-block__link"><?= $arResult['look_text'];?></a>
+                <?php endif;?>
             </div>
         </div>
     </section>
