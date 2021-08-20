@@ -1,4 +1,6 @@
 <?php
+//Template Name: Контакты
+
 $arResult = [
     'title' => carbon_get_the_post_meta('title'),
     'hidden_subtitle' => carbon_get_the_post_meta('hiden_subtitle'),
