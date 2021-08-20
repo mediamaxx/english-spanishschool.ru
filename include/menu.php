@@ -225,6 +225,7 @@ class walker_bem_header_menu_bottom extends Walker_Nav_Menu {
 }
 
 
+
 class walker_bem_footer_menu_top extends Walker_Nav_Menu {
     function __construct( $css_class_prefix ) {
         $this->css_class_prefix = $css_class_prefix;
