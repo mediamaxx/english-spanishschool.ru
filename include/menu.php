@@ -218,6 +218,7 @@ class walker_bem_header_menu_bottom extends Walker_Nav_Menu {
         $item_output .= $args->link_after;
         $item_output .= $args->after;
         $item_output .= '</a>';
+
         // Filter <li>
 
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
