@@ -78,7 +78,7 @@ $image = [
                         <a href="tel:<?= $link; ?>" class="page-header__phone page-header__phone--sm">
                             <span class="page-header__text"><?= $text; ?></span>
                             <svg>
-                                <use xlink:href="./spritemap.svg#sprite-phone"></use>
+                                <use xlink:href="<?= _assets(); ?>/spritemap.svg#sprite-phone"></use>
                             </svg>
                         </a>
 
