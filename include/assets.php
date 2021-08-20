@@ -19,6 +19,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_vendor_js_and_css' );
 function enqueue_vendor_js_and_css() {
 
     //JavaScript
+    wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/loadmore.js', array('jquery') );
     wp_enqueue_script( 'lazyload', get_stylesheet_directory_uri() . '/framework/js/lazyload.js', array(  ), '' , true );
 }
 
