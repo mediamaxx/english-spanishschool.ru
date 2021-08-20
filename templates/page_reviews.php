@@ -5,6 +5,8 @@
         <div class="main-block__title section-title">Отзывы о нас</div>
         <div class="main-block__inner">
             <div class="main-block__list list-reset">
+
+
                 <div class="main-block__item">
                     <div class="main-block__card">
                         <div class="main-block__media main-block__photo">
@@ -20,6 +22,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div class="main-block__item">
                     <div class="main-block__card">
                         <div class="main-block__media">
