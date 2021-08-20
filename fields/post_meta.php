@@ -22,6 +22,7 @@ $lists = array(
 Container::make('post_meta', 'Страница одной новости')
     ->where('post_type', '=', 'post')
     ->or_where( 'post_template', '=', 'templates/single_news.php' )
+    ->or_where( 'post_template', '=', 'templates/page_news.php' )
     ->add_fields(array(
 
         Field::make('complex', 'news_content', 'Содержание статьи')
@@ -70,6 +71,16 @@ Container::make('post_meta', 'Страница одной новости')
                     ->set_width(50),
 
             )),
+
+
+        Field::make('rich_text', 'anons', 'Текст для анонса записи')
+            ->set_default_value('Задача организации, в особенности же разбавленное изрядной долей эмпатии, рациональное мышление влечет за собой процесс внедрения и модернизации позиций.')
+            ->set_width(50),
+
+        Field::make('rich_text', 'anons_text_2', 'Текст для анонса записи')
+            ->set_default_value('Задача организации, в особенности же разбавленное изрядной долей эмпатии, рациональное мышление влечет за собой процесс внедрения и модернизации позиций.')
+            ->set_width(50),
+
 
     ));
 
