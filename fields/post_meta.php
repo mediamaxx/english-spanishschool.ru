@@ -538,19 +538,19 @@ Container::make('post_meta', 'Страница контакты')
             ->set_width(50),
 
         Field::make('text', 'index', 'Индекс')
-            ->set_default_value('Наш адрес')
+            ->set_default_value('236040')
             ->set_width(50),
 
         Field::make('text', 'country', 'Страна')
-            ->set_default_value('Наш адрес')
+            ->set_default_value('Российская Федерация')
             ->set_width(50),
 
         Field::make('text', 'city', 'Город')
             ->set_default_value('г. Калининград')
             ->set_width(50),
 
-        Field::make('text', 'street', 'Город')
-            ->set_default_value('г. Калининград')
+        Field::make('text', 'street', 'Улица')
+            ->set_default_value('Советский проспект')
             ->set_width(50),
 
         Field::make('text', 'address', 'Дом, корпус, этаж')
@@ -569,7 +569,7 @@ Container::make('post_meta', 'Страница контакты')
             ->set_default_value('Перезвоните мне')
             ->set_width(50),
 
-        Field::make('text', 'rec_link', 'Номер телефона')
+        Field::make('text', 'rec_link', 'Ссылка на форму')
             ->set_default_value('#modal-record')
             ->set_width(50),
 
