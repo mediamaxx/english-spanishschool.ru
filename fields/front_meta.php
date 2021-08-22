@@ -388,7 +388,10 @@
                         ->set_options( $lang )
                         ->set_default_value( 'english' ),
 
-                    Field::make( 'image', 'form_lang_image', 'Иконка флага (английский/испанский)' )
+                    Field::make( 'image', 'form_lang_image_eng', 'Иконка флага (английский)' )
+                        ->set_width(100),
+
+                    Field::make( 'image', 'form_lang_image_spn', 'Иконка флага (испанский)' )
                         ->set_width(100),
 
                     Field::make( 'rich_text', 'form_politics', 'Политика (для телефонов)' )
