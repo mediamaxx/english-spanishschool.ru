@@ -22,15 +22,22 @@ $image = [
 ?>
 <section class="hero-services" style="background-image: url(<?= $image['full_background'] ?>);">
     <div class="container">
+        <?php if ($arResult['title']||$arResult['subtitle']||$arResult['min_price']):?>
         <div class="hero-services__content">
             <div class="hero-services__title"><?= $arResult['title'] ?></div>
             <div class="hero-services__text"><?= $arResult['subtitle'] ?></div>
             <div class="hero-services__price">от <?= $arResult['min_price'] ?> руб.</div>
         </div>
+        <?php endif;?>
+        <?php if ($arResult['callback_title']||$arResult['callback_subtitle']):?>
         <div class="hero-services__callback">
+            <?php if ($arResult['callback_title']):?>
             <div class="hero-services__callback-title"><?= $arResult['callback_title'] ?></div>
+            <?php endif;?>
             <div class="hero-services__mobile-container">
+                <?php if ($arResult['callback_subtitle']):?>
                 <div class="hero-services__callback-subtitle"><?= $arResult['callback_subtitle'] ?></div>
+                <?php endif;?>
 
                 <div role="form" class="wpcf7" id="wpcf7-f78-o33" lang="ru-RU" dir="ltr">
                     <div class="screen-reader-response"></div>
@@ -68,11 +75,18 @@ $image = [
                 </div>
             </div>
         </div>
+        <?php endif;?>
     </div>
+    <?php if ($image['full']||$image['full_mobile']):?>
     <div class="hero-services__front-image">
+        <?php if ($image['full']):?>
         <img class="hero-services__front-image--md" src="<?= $image['full'] ?>" alt="Языковая школа в Калининграде">
+        <?php endif;?>
+        <?php if ($image['full_mobile']):?>
         <img class="hero-services__front-image--xs" src="<?= $image['full_mobile'] ?>" alt="Языковая школа в Калининграде">
+        <?php endif;?>
     </div>
+    <?php endif;?>
 </section>
 
 
