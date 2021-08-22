@@ -4,6 +4,12 @@
 
     ?>
 
+    <div class="hide" id="toTop">
+        <svg>
+            <use xlink:href="./spritemap.svg#sprite-top"></use>
+        </svg>
+    </div>
+
 
     <?php
 
@@ -11,11 +17,7 @@
 
     ?>
 
-    <div class="hide" id="toTop">
-        <svg>
-            <use xlink:href="./spritemap.svg#sprite-top"></use>
-        </svg>
-    </div>
+
 
     <div class="modal" id="modal-record">
         <div class="modal__container">
