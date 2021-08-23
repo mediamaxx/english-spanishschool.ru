@@ -7,12 +7,17 @@ $arResult = [
 ];
 
 ?>
-
+<?php if ($arResult['progress_title']||$arResult['progress_subtitle']||$arResult['progress_item']):?>
 <section class="progress">
     <div class="container">
+        <?php if ($arResult['progress_title']):?>
         <div class="progress__title section-title"><?= $arResult['progress_title'] ?></div>
+        <?php endif;?>
+        <?php if ($arResult['progress_subtitle']):?>
         <div class="progress__subtitle"><?= $arResult['progress_subtitle'] ?></div>
-
+        <?php endif;?>
+        
+        <?php if ($arResult['progress_item']):?>
         <ul class="progress__container list-reset">
             <?php foreach ($arResult['promo_adv'] as $item):
                 $image = [
@@ -28,6 +33,7 @@ $arResult = [
             <?php endforeach; ?>
 
         </ul>
-
+        <?php endif;?>
     </div>
 </section>
+<?php endif;?>
