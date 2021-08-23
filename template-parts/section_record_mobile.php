@@ -8,7 +8,7 @@ $arResult = [
 ];
 
 ?>
-
+<?php if ($arResult['form_title_mobile']||$arResult['form_subtitle_mobile']||$arResult['form_btn_text']||$arResult['form_btn_link']):?>
 <div class="record record-mobile">
     <div class="container">
         <div class="record__container record-mobile__container">
@@ -24,3 +24,4 @@ $arResult = [
         </div>
     </div>
 </div>
+<?php endif;?>
