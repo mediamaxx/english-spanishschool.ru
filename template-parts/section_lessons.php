@@ -19,7 +19,10 @@ $arResult = [
 ?>
 <section class="lessons">
     <div class="container">
+        <?php if ($arResult['lessons_title']):?>
         <div class="lessons__title section-title"><?= $arResult['lessons_title']?></div>
+        <?php endif;?>
+        <?php if ($arResult['lessons_image']||$arResult['lessons_text']||$arResult['lessons_link_sertificates']||$arResult['lessons_text_sertificates']||$arResult['lessons_link_about']||$arResult['lessons_text_about']||$arResult['lessons_text_socials']||$arResult['lessons_inst_link']||$arResult['lessons_vk_link']):?>
         <div class="lessons__wrapper">
             <div class="lessons__content">
                 <div class="lessons__text">
@@ -55,6 +58,8 @@ $arResult = [
             </div>
         </div>
     </div>
+    <?php endif;?>
+    <?php if ($arResult['lessons_gallery]):
     <div class="gallery">
         <div class="gallery__inner">
             <div class="container">
@@ -81,11 +86,14 @@ $arResult = [
                     <a href="<?= $image['full']?>" class="gallery__item"><img src="<?= $image['full']?>" alt="<?= $image['alt']?>" class="gallery__img"></a>
                 <?php endforeach; ?>
                 </div>
+            <?php if($arResult['lessons_text_mobile']): ?>
             <div class="gallery__description visible-xs">
                 <div class="container">
                     <p><?= $arResult['lessons_text_mobile']?></p>
                 </div>
             </div>
+            <?php endif;?>
         </div>
     </div>
+    <?php endif;?>
 </section>
