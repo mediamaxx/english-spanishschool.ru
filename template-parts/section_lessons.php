@@ -17,6 +17,7 @@ $arResult = [
 ];
 
 ?>
+<?php if ($arResult['lessons_title']||$arResult['lessons_image']||$arResult['lessons_text']||$arResult['lessons_link_sertificates']||$arResult['lessons_text_sertificates']||$arResult['lessons_link_about']||$arResult['lessons_text_about']||$arResult['lessons_text_socials']||$arResult['lessons_inst_link']||$arResult['lessons_vk_link']||$arResult['lessons_gallery']||$arResult['lessons_text_mobile']):?>
 <section class="lessons">
     <div class="container">
         <?php if ($arResult['lessons_title']):?>
@@ -97,3 +98,4 @@ $arResult = [
     </div>
     <?php endif;?>
 </section>
+<?php endif;?>
