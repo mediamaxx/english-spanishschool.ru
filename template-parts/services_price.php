@@ -7,11 +7,16 @@ $arResult = [
 ];
 ?>
 
-
+<?php if ($arResult['price_title']||$arResult['price_subtitle']||$arResult['price_item']):?>
 <section class="price">
     <div class="container">
+        <?php if ($arResult['price_title']):?>
         <div class="price__title section-title"><?= $arResult['promo_title'] ?></div>
-        <div class="price__subtitle"><?= $arResult['promo_title'] ?></div>
+        <?php endif;?>
+        <?php if ($arResult['price_subtitle']):?>
+        <div class="price__subtitle"><?= $arResult['promo_subtitle'] ?></div>
+        <?php endif;?>
+        <?php if ($arResult['price_item']):?>
         <div class="price__grid">
 
 
@@ -39,11 +44,8 @@ $arResult = [
 
             <?php endforeach; ?>
 
-
-
-
-
-
         </div>
+        <?php endif;?>
     </div>
 </section>
+<?php endif;?>
