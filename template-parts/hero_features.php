@@ -11,7 +11,7 @@ $arResult = [
 
 ?>
 
-
+<?php if ($arResult['title']||$arResult['title_text']||$arResult['list']||$arResult['title_mobile']||$arResult['title_image']||$arResult['title_image_mobile']):?>
 <section class="hero" style="background-image: url(<?= _assets(); ?>/img/hero-bg.png);">
     <?php if ($arResult['title']||$arResult['title_text']||$arResult['list']):?>
     <div class="container">
@@ -65,4 +65,4 @@ $arResult = [
     </div>
     <?php endif;?>
 </section>
-
+<?php endif;?>
