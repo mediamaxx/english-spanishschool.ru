@@ -7,10 +7,13 @@ $arResult = [
 
 
 ?>
-
+<?php if ($arResult['serv_title']||$arResult['serv_content']):?>
 <section class="services">
     <div class="container">
+        <?php if ($arResult['serv_title']):?>
         <div class="services__title section-title"><?= $arResult['serv_title'] ?></div>
+        <?php endif;?>
+        <?php if ($arResult['serv_content']):?>
         <div class="grid grid--services">
 
             <?php foreach ($arResult['serv_content'] as $item):
@@ -31,5 +34,7 @@ $arResult = [
 
 
         </div>
+        <?php endif;?>
     </div>
 </section>
+<?php endif;?>
