@@ -9,7 +9,10 @@ $arResult = [
 
 <section class="teachers">
     <div class="container">
+        <?php if ($arResult['teachers_title']):?>
         <div class="teachers__title section-title"><?= $arResult['teachers_title']?></div>
+        <?php endif;?>
+        <?php if ($arResult['teachers']):?>
         <div class="teachers__inner">
             <div class="teachers__list list-reset">
 
@@ -50,5 +53,6 @@ $arResult = [
                 </div>
             </div>
         </div>
+        <?php endif;?>
     </div>
 </section>
