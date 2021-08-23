@@ -8,7 +8,7 @@ $arResult = [
 ];
 
 ?>
-
+<?php if ($arResult['info_title']||$arResult['info_desc']||$arResult['info_desc_mobile']||$arResult['info_item']):?>
 <section class="information">
     <div class="container">
         <?php if ($arResult['info_title']):?>
@@ -45,3 +45,4 @@ $arResult = [
         <?php endif;?>
     </div>
 </section>
+<?php endif;?>
