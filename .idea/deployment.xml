@@ -5,7 +5,7 @@
       <paths name="english-schools.ru">
         <serverdata>
           <mappings>
-            <mapping deploy="/www/english-schools.ru/wp-content/themes/english-schools.mts3.ru" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
