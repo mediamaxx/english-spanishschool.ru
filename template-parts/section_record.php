@@ -7,7 +7,7 @@ $arResult = [
 ];
 
 ?>
-
+<?php if ($arResult['form_title']||$arResult['form_subtitle']||$arResult['form_item']):?>
 <section class="record record--main">
     <div class="container">
         <div class="record__container record__container--main">
@@ -85,3 +85,4 @@ $arResult = [
         </div>
     </div>
 </section>
+<?php endif;?>
