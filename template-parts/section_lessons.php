@@ -59,7 +59,7 @@ $arResult = [
         </div>
     </div>
     <?php endif;?>
-    <?php if ($arResult['lessons_gallery]):?>
+    <?php if ($arResult['lessons_gallery']):?>
     <div class="gallery">
         <div class="gallery__inner">
             <div class="container">
