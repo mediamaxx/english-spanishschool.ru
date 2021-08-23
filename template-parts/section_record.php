@@ -12,8 +12,13 @@ $arResult = [
     <div class="container">
         <div class="record__container record__container--main">
             <div class="record__cell record__cell--left">
+                <?php if ($arResult['form_title']):?>
                 <div class="record__title record__title--main section-title"><?= $arResult['form_title']?></div>
+                <?php endif;?>
+                <?php if ($arResult['form_subtitle']):?>
                 <div class="record__subtitle record__subtitle--main"><?= $arResult['form_subtitle']?></div>
+                <?php endif;?>
+                <?php if ($arResult['form_item']):?>
                 <ul class="record__descr list-reset">
                     <?php foreach ($arResult['form_item'] as $item):
                         $image = [
@@ -29,6 +34,7 @@ $arResult = [
                     <?php endforeach; ?>
 
                 </ul>
+                <?php endif;?>
             </div>
 
 
