@@ -8,16 +8,23 @@ $arResult = [
 ];
 
 ?>
-
-<section class="information">
-    <div class="container">
-        <div class="information__title section-title"><?= $arResult['info_title']?></div>
-        <div class="information__description information__description--xl">
-            <p><?= $arResult['info_desc']?></p>
-        </div>
+<?php if ($arResult['info_title']||$arResult['info_desc']||$arResult['info_desc_mobile']||$arResult['info_item']):?>
+    <section class="information">
+        <div class="container">
+            <?php if ($arResult['info_title']):?>
+                <div class="information__title section-title"><?= $arResult['info_title']?></div>
+            <?php endif;?>
+            <?php if ($arResult['info_desc']):?>
+                <div class="information__description information__description--xl">
+                    <p><?= $arResult['info_desc']?></p>
+                </div>
+            <?php endif;?>
+            <?php if ($arResult['info_desc_mobile']):?>
         <div class="information__description information__description--xs">
             <p><?= $arResult['info_desc_mobile']?></p>
         </div>
+        <?php endif;?>
+        <?php if ($arResult['info_item']):?>
         <ul class="information__list list-reset">
 
             <?php foreach ($arResult['info_item'] as $item):
@@ -35,5 +42,7 @@ $arResult = [
             </li>
             <?php endforeach;?>
         </ul>
-    </div>
-</section>
+        <?php endif;?>
+        </div>
+    </section>
+<?php endif;?>
