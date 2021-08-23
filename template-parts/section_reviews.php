@@ -13,8 +13,11 @@ $arResult = [
 
 <section class="reviews">
     <div class="container">
+        <?php if ($arResult['review_title']):?>
         <div class="reviews__title section-title"><?= $arResult['review_title']?></div>
+        <?php endif;?>
         <div class="reviews__container">
+            <?php if ($arResult['reviews']):?>
             <div class="reviews__list list-reset">
 
                 <?php foreach ($arResult['reviews'] as $item):
@@ -44,10 +47,9 @@ $arResult = [
                         </div>
                     </div>
                 <?php endforeach; ?>
-
-
-
             </div>
+            <?php endif;?>
+
             <div class="reviews__arrows carousel-arrows__container">
                 <div class="reviews__arrows--prev carousel-arrows__item carousel-arrows__item--prev" aria-label="Предыдущий слайд">
                     <svg>
@@ -63,8 +65,12 @@ $arResult = [
         </div>
 
         <div class="reviews__link-wrapper">
+            <?php if ($arResult['review_btn_text']||$arResult['review_btn_link']):?>
             <a href="<?= $arResult['review_btn_link']?>" class="btn btn-primary btn-reset reviews__btn"><?= $arResult['review_btn_text']?></a>
+            <?php endif;?>
+            <?php if ($arResult['comment_btn_text']||$arResult['comment_btn_link']):?>
             <a href="<?= $arResult['comment_btn_link']?>" class="btn btn-secondary btn-reset reviews__btn"><?= $arResult['comment_btn_text']?></a>
+            <?php endif;?>
         </div>
     </div>
 </section>
