@@ -6,7 +6,7 @@ $arResult = [
 ];
 
 ?>
-
+<?php if ($arResult['teachers_title']||$arResult['teachers']):?>
 <section class="teachers">
     <div class="container">
         <?php if ($arResult['teachers_title']):?>
@@ -56,3 +56,4 @@ $arResult = [
         <?php endif;?>
     </div>
 </section>
+<?php endif;?>
