@@ -102,6 +102,36 @@ $image = [
     <nav class="page-header__nav">
         <div class="page-header__overlay">
         </div>
+        <ul class="page-header__menu">
+            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Главная</a></li>
+            <li class="page-header__menu-item menu-item menu-item-has-children">
+                <a href="#" class="page-header__link">Английский язык</a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="#">Для детей</a></li>
+                    <li class="menu-item"><a href="#">Для взрослых</a></li>
+                    <li class="menu-item"><a href="#">Английский для туризма</a></li>
+                    <li class="menu-item"><a href="#">Корпоративное изучение</a></li>
+                    <li class="menu-item"><a href="#">Международные экзамены</a></li>
+                    <li class="menu-item"><a href="#">Профессиональные курсы английского языка</a></li>
+                    <li class="menu-item"><a href="#">Онлайн уроки</a></li>
+                    <li class="menu-item"><a href="#">Летние курсы</a></li>
+                    <li class="menu-item"><a href="#">Индивидуальные занятия</a></li>
+                </ul>
+            </li>
+            <li class="page-header__menu-item menu-item">
+                <a href="#" class="page-header__link">Испанский язык</a>
+            </li>
+            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">О школе</a></li>
+            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Отзывы</a></li>
+            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Цены</a></li>
+            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Блог</a></li>
+            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Акции</a></li>
+            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Контакты</a></li>
+        </ul>
+    </nav>
+    <nav class="page-header__nav">
+        <div class="page-header__overlay">
+        </div>
         <?php
         wp_nav_menu( array(
             'theme_location'  => 'header_menu_1',
