@@ -9,7 +9,7 @@ $arResult = [
 
 ?>
 
-
+<?php if ($arResult['banner_title']||$arResult['banner_subtitle']||$arResult['tabs_top']||$arResult['tabs_bottom']):?>
 <section class="products">
     <div class="container">
         <?php if ($arResult['banner_title']): ?>
@@ -73,4 +73,4 @@ $arResult = [
         <?php endif; ?>
     </div>
 </section>
-
+<?php endif;?>
