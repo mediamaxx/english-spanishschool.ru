@@ -10,7 +10,7 @@ $arResult = [
 ];
 
 ?>
-
+<?php if ($arResult['review_title']||$arResult['reviews']||$arResult['review_btn_text']||$arResult['review_btn_link']||$arResult['comment_btn_text']||$arResult['comment_btn_link']):?>
 <section class="reviews">
     <div class="container">
         <?php if ($arResult['review_title']):?>
@@ -74,3 +74,4 @@ $arResult = [
         </div>
     </div>
 </section>
+<?php endif;?>
