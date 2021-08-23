@@ -20,6 +20,7 @@ $image = [
 ];
 
 ?>
+<?php if ($arResult['title']||$arResult['service_background_image']||$arResult['min_price']||$arResult['callback_title']||$arResult['subtitle']||$arResult['callback_subtitle']||$arResult['service_front_image']||$arResult['service_front_image_mobile']):?>
 <section class="hero-services" style="background-image: url(<?= $image['full_background'] ?>);">
     <div class="container">
         <?php if ($arResult['title']||$arResult['subtitle']||$arResult['min_price']):?>
@@ -88,5 +89,5 @@ $image = [
     </div>
     <?php endif;?>
 </section>
-
+<?php endif;?>
 
