@@ -53,12 +53,12 @@ $arResult = [
                 <div class="reviews__arrows carousel-arrows__container">
                     <div class="reviews__arrows--prev carousel-arrows__item carousel-arrows__item--prev" aria-label="Предыдущий слайд">
                         <svg>
-                            <use xlink:href="./spritemap.svg#sprite-ar-prev"></use>
+                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-ar-prev"></use>
                         </svg>
                     </div>
                     <div class="reviews__arrows--next carousel-arrows__item carousel-arrows__item--next" aria-label="Следующий слайд">
                         <svg>
-                            <use xlink:href="./spritemap.svg#sprite-ar-next"></use>
+                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-ar-next"></use>
                         </svg>
                     </div>
                 </div>

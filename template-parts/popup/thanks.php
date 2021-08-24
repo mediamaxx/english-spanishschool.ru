@@ -3,7 +3,7 @@
 
         <div class="icon">
             <svg>
-                <use xlink:href="./spritemap.svg#sprite-check"></use>
+                <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-check"></use>
             </svg>
         </div>
         <div class="modal__title">Спасибо</div>

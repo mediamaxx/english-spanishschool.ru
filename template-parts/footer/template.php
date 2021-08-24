@@ -44,27 +44,27 @@ $arResult = [
                 <div class="page-footer__socials list-reset">
                     <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Instagram">
                         <svg>
-                            <use xlink:href="./spritemap.svg#sprite-inst"></use>
+                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-inst"></use>
                         </svg>
                     </a>
                     <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Вконтакте">
                         <svg>
-                            <use xlink:href="./spritemap.svg#sprite-vk"></use>
+                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-vk"></use>
                         </svg>
                     </a>
                     <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в WhatsApp">
                         <svg>
-                            <use xlink:href="./spritemap.svg#sprite-wapp"></use>
+                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-wapp"></use>
                         </svg>
                     </a>
                     <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Telegram">
                         <svg>
-                            <use xlink:href="./spritemap.svg#sprite-tg"></use>
+                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-tg"></use>
                         </svg>
                     </a>
                     <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Viber">
                         <svg>
-                            <use xlink:href="./spritemap.svg#sprite-viber"></use>
+                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-viber"></use>
                         </svg>
                     </a>
                 </div>

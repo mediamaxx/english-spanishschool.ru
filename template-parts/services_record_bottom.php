@@ -32,21 +32,21 @@ $arResult = [
                         <?php if ($arResult['record_socials_whatsapp']):?>
                             <a href="<?= $arResult['record_socials_whatsapp'] ?>" class="record-bottom__social" aria-label="Напишите нам WhatsApp">
                                 <svg>
-                                    <use xlink:href="./spritemap.svg#sprite-wapp"></use>
+                                    <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-wapp"></use>
                                 </svg>
                             </a>
                         <?php endif;?>
                         <?php if ($arResult['record_socials_tg']):?>
                             <a href="<?= $arResult['record_socials_tg'] ?>" class="record-bottom__social" aria-label="Напишите нам Telegram">
                                 <svg>
-                                    <use xlink:href="./spritemap.svg#sprite-tg"></use>
+                                    <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-tg"></use>
                                 </svg>
                             </a>
                         <?php endif;?>
                         <?php if ($arResult['record_socials_viber']):?>
                             <a href="<?= $arResult['record_socials_viber'] ?>" class="record-bottom__social" aria-label="Напишите нам Viber">
                                 <svg>
-                                    <use xlink:href="./spritemap.svg#sprite-viber"></use>
+                                    <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-viber"></use>
                                 </svg>
                             </a>
                         <?php endif;?>

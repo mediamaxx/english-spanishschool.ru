@@ -45,12 +45,12 @@ $arResult = [
                             <span class="lessons__socials-title"><?= $arResult['lessons_text_socials']?> </span>
                             <a href="<?= $arResult['lessons_inst_link']?>" class="lessons__socials-link socials-link">
                                 <svg>
-                                    <use xlink:href="./spritemap.svg#sprite-inst"></use>
+                                    <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-inst"></use>
                                 </svg>
                             </a>
                             <a href="<?= $arResult['lessons_vk_link']?>" class="lessons__socials-link socials-link">
                                 <svg>
-                                    <use xlink:href="./spritemap.svg#sprite-vk"></use>
+                                    <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-vk"></use>
                                 </svg>
                             </a>
                         </div>
@@ -67,12 +67,12 @@ $arResult = [
                         <div class="gallery__arrows carousel-arrows__container">
                             <div class="gallery__arrows--prev carousel-arrows__item carousel-arrows__item--prev" aria-label="Предыдущий слайд">
                                 <svg>
-                                    <use xlink:href="./spritemap.svg#sprite-ar-prev"></use>
+                                    <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-ar-prev"></use>
                                 </svg>
                             </div>
                             <div class="gallery__arrows--next carousel-arrows__item carousel-arrows__item--next" aria-label="Следующий слайд">
                                 <svg>
-                                    <use xlink:href="./spritemap.svg#sprite-ar-next"></use>
+                                    <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-ar-next"></use>
                                 </svg>
                             </div>
                         </div>

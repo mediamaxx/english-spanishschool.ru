@@ -111,7 +111,7 @@
                             <div class="dragndrop">
                 <span class="icon">
                   <svg>
-                      <use xlink:href="./spritemap.svg#sprite-dnd"></use>
+                      <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-dnd"></use>
                   </svg>
                 </span>
                                 <span>Загрузить изображение</span>
