@@ -1,1 +1,5 @@
-<button class="up"><img src="<?= _assets(); ?>/img/next.svg" alt="Alt" class="svg"></button>
+<div class="hide" id="toTop">
+    <svg>
+        <use xlink:href="./spritemap.svg#sprite-top"></use>
+    </svg>
+</div>

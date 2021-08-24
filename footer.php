@@ -4,20 +4,11 @@
 
     ?>
 
-
-    <div class="hide" id="toTop">
-        <svg>
-            <use xlink:href="./spritemap.svg#sprite-top"></use>
-        </svg>
-    </div>
-
-
     <?php
 
-        wp_footer();
+    get_template_part('template-parts/up-button/template');
 
     ?>
-
 
 
     <div class="modal" id="modal-record">
@@ -66,7 +57,6 @@
                 </form>
             </div>
         </div>
-    </div>
     </div>
     <div class="modal" id="modal-question">
         <div class="modal__container">
@@ -134,7 +124,11 @@
         </div>
     </div>
 
+    <?php
 
+    wp_footer();
+
+    ?>
 
 </body>
 </html>
