@@ -29,10 +29,9 @@
         <meta name='robots' content='noindex, nofollow' />
     <?php endif; ?>
 
-
+    <?php wp_head();?>
 </head>
 <body>
-
 <?php
 get_template_part('template-parts/header/template');
 ?>
