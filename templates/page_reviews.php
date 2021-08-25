@@ -134,14 +134,7 @@
                       <span class="wpcf7-form-control wpcf7-acceptance">
                           <span class="wpcf7-list-item">
                               <label>
-        <!--                        <input type="checkbox" name="acceptance-728" value="1" aria-invalid="false" class="input-check" />-->
-                                <span class="wpcf7-list-item-label">
-                                      <span class="input-check__text">Записываясь, вы подтверждаете что ознакомлены <br> с <a href="">политикой конфиденциальности</a> и согласны на обработку персональных данных</span>
-                                </span>
-                              </label>
-                          </span>
-                      </span>
-                  </span>
+        <!--                    _
                             </div>
                         </div>
                         <div class="hidden-wrapper">

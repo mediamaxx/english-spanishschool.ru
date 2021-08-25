@@ -11,9 +11,6 @@ $arResult = [
         'text'  => carbon_get_the_post_meta('title_text'),
     ],
 
-    'content' => apply_filters('the_content', carbon_get_the_post_meta('content')),
-    'content_2' => apply_filters('the_content', carbon_get_the_post_meta('content_2')),
-
 ];
 
 $post_amount = 0;
