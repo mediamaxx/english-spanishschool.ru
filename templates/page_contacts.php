@@ -31,10 +31,11 @@ $arResult = [
 <main class="page-main page-contacts">
     <div class="breadcrumbs">
         <div class="container">
-            <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
-                <li class="breadcrumbs__item"><span class="breadcrumbs__text">Контакты</span></li>
-            </ul>
+            <?php
+            if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb( '<ul class="breadcrumbs__list"><li class="breadcrumbs__item">','</li></ul>' );
+            }
+            ?>
         </div>
     </div>
 

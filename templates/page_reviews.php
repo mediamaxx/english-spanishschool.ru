@@ -1,4 +1,20 @@
-<?php ?>
+<?php
+
+//Template Name: Страница отзывов
+
+get_header();
+?>
+
+<main class="page-main">
+<div class="breadcrumbs">
+    <div class="container">
+        <?php
+        if ( function_exists('yoast_breadcrumb') ) {
+            yoast_breadcrumb( '<ul class="breadcrumbs__list"><li class="breadcrumbs__item">','</li></ul>' );
+        }
+        ?>
+    </div>
+</div>
 
 <section class="main-block">
     <div class="container">
@@ -134,7 +150,6 @@
                       <span class="wpcf7-form-control wpcf7-acceptance">
                           <span class="wpcf7-list-item">
                               <label>
-        <!--                    _
                             </div>
                         </div>
                         <div class="hidden-wrapper">
@@ -147,3 +162,12 @@
         </div>
     </div>
 </div>
+
+</main>
+
+
+
+
+<?php
+
+get_footer();

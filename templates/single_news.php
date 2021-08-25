@@ -13,7 +13,11 @@ $arResult = [
 <main class="page-main">
     <div class="breadcrumbs">
         <div class="container">
-            Главная              Контакты
+            <?php
+            if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb( '<ul class="breadcrumbs__list"><li class="breadcrumbs__item">','</li></ul>' );
+            }
+            ?>
         </div>
     </div>
     <div class="container">
