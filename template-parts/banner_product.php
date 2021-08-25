@@ -19,7 +19,7 @@ $arResult = [
                 <div class="products__subtitle"><?= $arResult['banner_subtitle']?></div>
             <?php endif; ?>
 
-            <?php if ($arResult['tabs_top'] || $arResult['tabs_top']): ?>
+            <?php if ($arResult['tabs_top'] || $arResult['tabs_bottom']): ?>
                 <div class="products__grid">
 
                     <?php if ($arResult['tabs_top']): ?>
