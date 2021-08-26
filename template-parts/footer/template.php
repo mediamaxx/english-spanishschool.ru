@@ -86,7 +86,7 @@ $arResult = [
                     <a href=""><span class="page-footer__menu-title">Испанский язык</span></a>
                     <?php
                     wp_nav_menu( array(
-                        'theme_location'  => 'footer_menu_2',
+                        'theme_location'  => 'footer_menu_3',
                         'container'       => false,
                         'menu_class'      => 'page-footer__menu--right list-reset',
                         'depth'           => 3,

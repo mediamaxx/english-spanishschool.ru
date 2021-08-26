@@ -9,8 +9,9 @@ register_nav_menus(
     array(
         'header_menu_1'        => 'Меню шапки 1',
         'header_menu_2'        => 'Меню шапки 2',
-        'footer_menu_1'        => 'Меню в подвале 1',
-        'footer_menu_2'        => 'Меню в подвале 2',
+        'footer_menu_1'        => 'Меню в подвале (Основное)',
+        'footer_menu_2'        => 'Меню в подвале (Английский)',
+        'footer_menu_3'        => 'Меню в подвале (Испанский)',
 
     )
 );
