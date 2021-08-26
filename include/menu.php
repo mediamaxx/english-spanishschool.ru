@@ -232,7 +232,7 @@ class walker_bem_footer_menu_top extends Walker_Nav_Menu {
 
         // Define menu item names appropriately
         $this->item_css_class_suffixes = array(
-            'item'                    => 'page-footer__nav-item menu-item',
+            'item'                    => ' page-footer__nav-item menu-item',
             'link'                    => '__link',
 
 
