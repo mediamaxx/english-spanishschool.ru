@@ -33,11 +33,7 @@ $arResult = [
                                     <div class="teachers__description"><span class="highlight">“</span> <?= $item['teach_desc']?> <span class="highlight">“</span></div>
                                 </div>
                             </div>
-
                         <?php endforeach; ?>
-
-
-
                     </div>
                     <a href="#" class="teachers__link">Посмотреть всех преподавателей</a>
                     <div class="teachers__arrows carousel-arrows__container">
