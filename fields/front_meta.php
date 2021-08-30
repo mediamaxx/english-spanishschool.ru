@@ -29,7 +29,7 @@
 
                     Field::make('complex', 'hero_banner', 'Баннер')
                         ->set_max(3)
-                        ->add_fields(array(
+                        ->add_tabs(array(
                             Field::make( 'text', 'title', 'Заголовок' )
                                 ->set_default_value('Языковая школа <br>в Калининграде')
                                 ->set_width(100),
