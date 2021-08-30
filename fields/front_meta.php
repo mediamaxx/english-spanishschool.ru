@@ -27,33 +27,39 @@
                 ))
                 ->add_fields('hero_features', 'Баннер', array(
 
-                    Field::make( 'text', 'title', 'Заголовок' )
-                        ->set_default_value('Языковая школа <br>в Калининграде')
-                        ->set_width(100),
-
-                    Field::make( 'rich_text', 'title_text', 'Предаголовок' )
-                        ->set_default_value('Преподаем английский и испанский языки уже <span>более 5 лет</span>')
-                        ->set_width(100),
-
-                    Field::make('complex', 'list', 'Преимущества')
+                    Field::make('complex', 'hero_banner', 'Баннер')
                         ->set_max(3)
                         ->add_fields(array(
-                            Field::make('image', 'icon', 'Иконка')
-                                ->set_width(40),
-                            Field::make('textarea', 'text', 'Описание')
-                                ->set_default_value('Дипломированные преподаватели лингвисты с международными сертификатами')
-                                ->set_width(60)
+                            Field::make( 'text', 'title', 'Заголовок' )
+                                ->set_default_value('Языковая школа <br>в Калининграде')
+                                ->set_width(100),
+
+                            Field::make( 'rich_text', 'title_text', 'Предаголовок' )
+                                ->set_default_value('Преподаем английский и испанский языки уже <span>более 5 лет</span>')
+                                ->set_width(100),
+
+                            Field::make('complex', 'list', 'Преимущества')
+                                ->set_max(3)
+                                ->add_fields(array(
+                                    Field::make('image', 'icon', 'Иконка')
+                                        ->set_width(40),
+                                    Field::make('textarea', 'text', 'Описание')
+                                        ->set_default_value('Дипломированные преподаватели лингвисты с международными сертификатами')
+                                        ->set_width(60)
+                                )),
+
+                            Field::make( 'text', 'title_mobile', 'Заголовок (для телефонов)' )
+                                ->set_default_value('Обучение английскому и испанскому языку в Калининграде')
+                                ->set_width(100),
+
+                            Field::make( 'image', 'title_image', 'Фото на бэкграунде' )
+                                ->set_width(50),
+
+                            Field::make( 'image', 'title_image_mobile', 'Фото на бэкграунде (для телефонов)' )
+                                ->set_width(50),
+
+
                         )),
-
-                    Field::make( 'text', 'title_mobile', 'Заголовок (для телефонов)' )
-                        ->set_default_value('Обучение английскому и испанскому языку в Калининграде')
-                        ->set_width(100),
-
-                    Field::make( 'image', 'title_image', 'Фото на бэкграунде' )
-                        ->set_width(50),
-
-                    Field::make( 'image', 'title_image_mobile', 'Фото на бэкграунде (для телефонов)' )
-                        ->set_width(50),
                    
                 ))
 
