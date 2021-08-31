@@ -8,6 +8,10 @@ $arResult = [
 
 <?php if ($arResult['hero_banner']):?>
     <section class="hero" style="background-image: url(<?= _assets(); ?>/img/hero-bg.png);">
+        <div class="slider-arrows hero__slider-arrows">
+            <button class="prev"><img src="img/left-arrow.svg" alt="Alt" class="svg"></button>
+            <button class="next"><img src="img/right-arrow.svg" alt="Alt" class="svg"></button>
+        </div>
     <?php foreach ($arResult['hero_banner'] as $result):?>
         <?php if ($result['title']||$result['title_text']||$result['list']):?>
             <div class="container">
