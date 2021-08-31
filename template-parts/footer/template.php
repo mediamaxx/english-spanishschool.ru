@@ -14,6 +14,8 @@ $arResult = [
     'footer_worktime' => carbon_get_theme_option( 'footer_worktime' ),
     'footer_company_name' => carbon_get_theme_option( 'footer_company_name' ),
     'footer_copyright' => carbon_get_theme_option( 'footer_copyright' ),
+    'footer_socials' => carbon_get_theme_option( 'footer_socials' ),
+
 ];
 
 ?>
@@ -42,31 +44,13 @@ $arResult = [
             <div class="page-footer__middle-left">
                 <div class="page-footer__socials-title"><?= $arResult['footer_title'] ?></div>
                 <div class="page-footer__socials list-reset">
-                    <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Instagram">
-                        <svg>
-                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-inst"></use>
-                        </svg>
-                    </a>
-                    <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Вконтакте">
-                        <svg>
-                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-vk"></use>
-                        </svg>
-                    </a>
-                    <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в WhatsApp">
-                        <svg>
-                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-wapp"></use>
-                        </svg>
-                    </a>
-                    <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Telegram">
-                        <svg>
-                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-tg"></use>
-                        </svg>
-                    </a>
-                    <a href="" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Viber">
-                        <svg>
-                            <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-viber"></use>
-                        </svg>
-                    </a>
+                    <?php foreach ($arResult['footer_socials'] as $item):?>
+                        <a href="<?= $item['socials_link']?>" class="page-footer__socials-link socials-link" aria-label="Напишите нам в Instagram">
+                            <svg>
+                                <use xlink:href="<?= _assets();?>/spritemap.svg#sprite-<?= $item['socials_name'];?>"></use>
+                            </svg>
+                        </a>
+                    <?php endforeach;?>
                 </div>
             </div>
             <div class="page-footer__middle-center">
