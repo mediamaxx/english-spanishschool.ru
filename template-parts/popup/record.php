@@ -5,7 +5,6 @@
 
         <?= do_shortcode('[contact-form-7 id="258" title="Записаться" html_class="form"]'); ?>
 
-
     </div>
 </div>
 
