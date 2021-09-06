@@ -57,3 +57,7 @@ include('include/assets.php');
 
 include('include/thumbnails.php');
 
+add_filter( 'wpseo_breadcrumb_single_link', 'change_breadcrumb_link_class');
+function change_breadcrumb_link_class($link) {
+    return str_replace('<a', '<a class="breadcrumbs__link"', $link);
+}

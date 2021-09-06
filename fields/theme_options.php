@@ -38,7 +38,7 @@ Container::make('theme_options', 'Header/Footer')
 
 
 
-    
+
     ->add_tab('Подвал сайта', array(
         Field::make('image', 'footer_logo_first', 'Логотип - основной')
             ->set_width(50),
@@ -59,7 +59,15 @@ Container::make('theme_options', 'Header/Footer')
             ->set_max(6)
             ->add_fields(array(
                 Field::make( 'text', 'socials_link', 'Ссылка' )->set_width(50),
-                Field::make( 'text', 'socials_name', 'Название соцсети' )->set_width(50),
+                Field::make( 'select', 'socials_name', 'Название соцсети' )
+                    ->set_width(50)
+                    ->set_options( array(
+                        'inst' => 'instagram',
+                        'wapp' => 'whatsapp',
+                        'tg' => 'Telegram',
+                        'vk' => 'Вконтакте',
+                        'viber' => 'Viber',
+                    ) ),
             )),
 
 
@@ -98,7 +106,15 @@ Container::make('theme_options', 'Header/Footer')
             ->set_default_value( 'Все материалы данного сайта являются объектами авторского права (в том числе дизайн). Запрещается копирование, распространение
 (в том числе путем копирования на другие сайты и ресурсы в Интернете) или любое иное использование информации и объектов без предварительного согласия правообладателя' )
             ->set_width(75),
-        ))
+    ))
+
+
+    ->add_tab('Техническая Информация', array(
+            Field::make('textarea', 'addones', 'Дополнительный код')
+                ->set_width(100),
+
+        )
+    )
 
 
 

@@ -11,10 +11,10 @@ $arResult = [
     <section class="price">
         <div class="container">
             <?php if ($arResult['price_title']):?>
-                <div class="price__title section-title"><?= $arResult['promo_title'] ?></div>
+                               <div class="price__title section-title"><?= $arResult['price_title'] ?></div>
             <?php endif;?>
             <?php if ($arResult['price_subtitle']):?>
-                <div class="price__subtitle"><?= $arResult['promo_subtitle'] ?></div>
+                               <div class="price__subtitle"><?= $arResult['price_subtitle'] ?></div>
             <?php endif;?>
             <?php if ($arResult['price_item']):?>
                 <div class="price__grid">
@@ -27,13 +27,13 @@ $arResult = [
                             <div class="price__desc">
             <span class="price__time">
               <svg>
-                  <use xlink:href="./spritemap.svg#sprite-clock"></use>
+                  <use xlink:href="<?= _assets();?>/spritemap.svg#sprite-clock"></use>
               </svg>
               <span class="price__time-value"><?= $item['price_item_minutes'] ?> минут</span>
             </span>
                                 <span class="price__lessons">
               <svg>
-                  <use xlink:href="./spritemap.svg#sprite-clndr"></use>
+                  <use xlink:href="<?= _assets();?>/spritemap.svg#sprite-clndr"></use>
               </svg>
               <span class="price__lessons-value"><?= $item['price_item_lessons'] ?> занятие в месяц</span>
             </span>

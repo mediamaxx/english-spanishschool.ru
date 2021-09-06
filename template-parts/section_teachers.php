@@ -33,18 +33,22 @@ $arResult = [
                                     <div class="teachers__description"><span class="highlight">“</span> <?= $item['teach_desc']?> <span class="highlight">“</span></div>
                                 </div>
                             </div>
+
                         <?php endforeach; ?>
+
+
+
                     </div>
                     <a href="#" class="teachers__link">Посмотреть всех преподавателей</a>
                     <div class="teachers__arrows carousel-arrows__container">
                         <div class="teachers__arrows--prev carousel-arrows__item carousel-arrows__item--prev" aria-label="Предыдущий слайд">
                             <svg>
-                                <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-ar-prev"></use>
+                                <use xlink:href="<?= _assets();?>/spritemap.svg#sprite-ar-prev"></use>
                             </svg>
                         </div>
                         <div class="teachers__arrows--next carousel-arrows__item carousel-arrows__item--next" aria-label="Следующий слайд">
                             <svg>
-                                <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-ar-next"></use>
+                                <use xlink:href="<?= _assets();?>/spritemap.svg#sprite-ar-next"></use>
                             </svg>
                         </div>
                     </div>

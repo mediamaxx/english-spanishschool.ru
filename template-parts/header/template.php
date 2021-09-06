@@ -46,8 +46,8 @@ $image = [
 
         <?php if ($arResult['header_desc']):?>
             <div class="page-header__locality">
-                <svg>
-                    <use xlink:href="<?php _assets();?>/spritemap.svg#sprite-local"></use>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+                    <path d="M8 0C4.00606 0 0.75676 3.2493 0.75676 7.2432C0.75676 12.1998 7.23875 19.4763 7.51473 19.7836C7.77395 20.0723 8.22653 20.0718 8.48528 19.7836C8.76125 19.4763 15.2432 12.1998 15.2432 7.2432C15.2432 3.2493 11.9939 0 8 0ZM8 10.8875C5.99055 10.8875 4.35578 9.25266 4.35578 7.2432C4.35578 5.23375 5.99059 3.59898 8 3.59898C10.0094 3.59898 11.6442 5.23379 11.6442 7.24324C11.6442 9.2527 10.0094 10.8875 8 10.8875Z" fill="#C31C22"/>
                 </svg>
                 <span><?= $arResult['header_desc'];?></span></div>
         <?php endif; ?>
@@ -111,33 +111,5 @@ $image = [
             'walker'          => new walker_bem_header_menu_top('page-header__nav'),
         ) );
         ?>
-
-
-        <!--        <ul class="page-header__menu">-->
-        <!--            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Главная</a></li>-->
-        <!--            <li class="page-header__menu-item menu-item menu-item-has-children">-->
-        <!--                <a href="#" class="page-header__link">Английский язык</a>-->
-        <!--                <ul class="sub-menu">-->
-        <!--                    <li class="menu-item"><a href="#">Для детей</a></li>-->
-        <!--                    <li class="menu-item"><a href="#">Для взрослых</a></li>-->
-        <!--                    <li class="menu-item"><a href="#">Английский для туризма</a></li>-->
-        <!--                    <li class="menu-item"><a href="#">Корпоративное изучение</a></li>-->
-        <!--                    <li class="menu-item"><a href="#">Международные экзамены</a></li>-->
-        <!--                    <li class="menu-item"><a href="#">Профессиональные курсы английского языка</a></li>-->
-        <!--                    <li class="menu-item"><a href="#">Онлайн уроки</a></li>-->
-        <!--                    <li class="menu-item"><a href="#">Летние курсы</a></li>-->
-        <!--                    <li class="menu-item"><a href="#">Индивидуальные занятия</a></li>-->
-        <!--                </ul>-->
-        <!--            </li>-->
-        <!--            <li class="page-header__menu-item menu-item">-->
-        <!--                <a href="#" class="page-header__link">Испанский язык</a>-->
-        <!--            </li>-->
-        <!--            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">О школе</a></li>-->
-        <!--            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Отзывы</a></li>-->
-        <!--            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Цены</a></li>-->
-        <!--            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Блог</a></li>-->
-        <!--            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Акции</a></li>-->
-        <!--            <li class="page-header__menu-item menu-item"><a href="#" class="page-header__link">Контакты</a></li>-->
-        <!--        </ul>-->
     </nav>
 </header>

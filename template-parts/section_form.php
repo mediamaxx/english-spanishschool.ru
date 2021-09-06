@@ -5,7 +5,8 @@ $arResult = [
     'form_list' => $args['form_list'],
     'form_link' => $args['form_link'],
     'form_lang' => $args['form_lang'],
-    'form_lang_image' => $args['form_lang_image'],
+    'form_lang_image_eng' => $args['form_lang_image_eng'],
+    'form_lang_image_spn' => $args['form_lang_image_spn'],
     'form_politics' => $args['form_politics'],
 
 

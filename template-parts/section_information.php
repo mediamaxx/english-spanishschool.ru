@@ -20,29 +20,29 @@ $arResult = [
                 </div>
             <?php endif;?>
             <?php if ($arResult['info_desc_mobile']):?>
-        <div class="information__description information__description--xs">
-            <p><?= $arResult['info_desc_mobile']?></p>
-        </div>
-        <?php endif;?>
-        <?php if ($arResult['info_item']):?>
-        <ul class="information__list list-reset">
+                <div class="information__description information__description--xs">
+                    <p><?= $arResult['info_desc_mobile']?></p>
+                </div>
+            <?php endif;?>
+            <?php if ($arResult['info_item']):?>
+                <ul class="information__list list-reset">
 
-            <?php foreach ($arResult['info_item'] as $item):
-            $image = [
-                'full' => wp_get_attachment_image_url($item['info_image'], 'full'),
-                'full_mobile' => wp_get_attachment_image_url($item['info_image_mobile'], 'full'),
-            ];
-            ?>
+                    <?php foreach ($arResult['info_item'] as $item):
+                        $image = [
+                            'full' => wp_get_attachment_image_url($item['info_image'], 'full'),
+                            'full_mobile' => wp_get_attachment_image_url($item['info_image_mobile'], 'full'),
+                        ];
+                        ?>
 
-            <li class="information__item">
-                <a href="<?= $item['info_link']?>" class="information__link"><img src="<?= $image['full']?>" alt="<?= $item['info_lang']?>" class="information__img information__img--xl"></a>
-                <a href="<?= $item['info_link']?>" class="information__link information__link--xs"><img src="<?= $image['full_mobile']?>" alt="<?= $item['info_lang']?>" class="information__img information__img--xs"></a>
-                <a href="<?= $item['info_link']?>" class="information__link-title"><span class="information__item-title"><?= $item['info_lang']?></span></a>
-                <div class="information__price">от <?= $item['info_min_price']?> руб.</div>
-            </li>
-            <?php endforeach;?>
-        </ul>
-        <?php endif;?>
+                        <li class="information__item">
+                            <a href="<?= $item['info_link']?>" class="information__link"><img src="<?= $image['full']?>" alt="<?= $item['info_lang']?>" class="information__img information__img--xl"></a>
+                            <a href="<?= $item['info_link']?>" class="information__link information__link--xs"><img src="<?= $image['full_mobile']?>" alt="<?= $item['info_lang']?>" class="information__img information__img--xs"></a>
+                            <a href="<?= $item['info_link']?>" class="information__link-title"><span class="information__item-title"><?= $item['info_lang']?></span></a>
+                            <div class="information__price">от <?= $item['info_min_price']?> руб.</div>
+                        </li>
+                    <?php endforeach;?>
+                </ul>
+            <?php endif;?>
         </div>
     </section>
 <?php endif;?>

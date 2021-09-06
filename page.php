@@ -8,21 +8,21 @@ $arParams = carbon_get_the_post_meta( 'front_page' );
 ?>
 
 
-<main class="main">	
+    <main class="main">
 
-    <div class="breadcrumbs-block">
-        <div class="container">
-            <?php
+        <div class="breadcrumbs-block">
+            <div class="container">
+                <?php
                 if ( function_exists('yoast_breadcrumb') ) {
                     yoast_breadcrumb( '<ul class="breadcrumbs__list">','</ul>' );
-                }	
-			
-            ?>
-        </div>
-    </div>		
+                }
 
-    <?php
-    
+                ?>
+            </div>
+        </div>
+
+        <?php
+
         if($arParams):
 
             foreach($arParams as $arItem):
@@ -42,19 +42,19 @@ $arParams = carbon_get_the_post_meta( 'front_page' );
             </div>
 
             <div class="section seo">
-                <div class="container">					
+                <div class="container">
                     <div class="seo__text format-text">
                         К сожалению, данная страница находится на стадии заполнения
                     </div>
                 </div>
-            </div>	
+            </div>
 
-            <?php
-            
-        endif; 
-    ?>
+        <?php
 
-</main>		
+        endif;
+        ?>
+
+    </main>
 
 <?php
 

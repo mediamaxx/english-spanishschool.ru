@@ -10,10 +10,10 @@ if( function_exists( 'add_image_size' )) {
     // add_image_size( 'product', 240, 330, true ); 
     // add_image_size( 'news', 350, 270, true ); 
     // add_image_size( 'serv', 400, 350, true ); 
-    add_image_size( 'middle', 650, 650, true ); 
+    add_image_size( 'middle', 650, 650, true );
 
     // add_image_size( 'news_big', 480, 360, true );
-   
+
     // add_image_size( 'card', 610, 337, true );
     // add_image_size( 'card_big', 915, 480, true );
     add_image_size( 'hero', 1920, 960, true );

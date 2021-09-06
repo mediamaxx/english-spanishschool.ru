@@ -68,7 +68,7 @@ class walker_bem_header_menu_top extends Walker_Nav_Menu {
         );
         $class_names = implode( ' ', $classes );
         // Add a ul wrapper to sub nav
-        $output .= "\n" . $indent . '<ul class="' . $class_names . '"><a href="javascript:void(0);">Назад</a></li>' . "\n";
+        $output .= "\n" . $indent . '<ul class="' . $class_names . '"> <li class="menu__back"><a href="javascript:void(0);">Назад</a></li>' . "\n";
     }
 
     // Add main/sub classes to li's and links
@@ -334,8 +334,8 @@ class walker_bem_footer_menu_bottom extends Walker_Nav_Menu {
 
         // Define menu item names appropriately
         $this->item_css_class_suffixes = array(
-            'item'                    => 'page-footer__menu menu-item',
-            'link'                    => '__link',
+            'item'                    => ' page-footer__menu menu-item',
+            'link'                    => '',
 
             'parent_item'             => 's menu__link--sub has-child',
 

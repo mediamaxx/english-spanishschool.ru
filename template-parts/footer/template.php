@@ -96,7 +96,7 @@ $arResult = [
                 <div class="page-footer__copy-date"><?=date('Y');?>  <?= $arResult['footer_company_name']; ?>l</div>
                 <div class="page-footer__copy-text"><?= $arResult['footer_copyright']; ?></div>
             </div>
-            <a href="http://mtsite.ru" class="page-footer__powered dev-link" rel=”nofollow”>
+            <a href="http://mtsite.ru" class="page-footer__powered dev-link" rel=”nofollow">
                 <span class="dev-link__text">Сделано в веб-студии "Мультисайт" Разработка и продвижение сайтов</span>
                 <span class="dev-link__img">
             <img src="<?= _assets(); ?>/img/mtsite.png" alt="Сделано в веб-студии Мультисайт">

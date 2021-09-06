@@ -29,7 +29,7 @@
         <meta name='robots' content='noindex, nofollow' />
     <?php endif; ?>
 
-
+    <?php wp_head();?>
 </head>
 <body>
 
